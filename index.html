@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drupal Coder</title>
+    <link
+      rel="stylesheet"
+      media="all"
+      href="assets/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div>
+      <!-- Навигация -->
+      <header class="navbar navbar-default" id="navbar">
+        <div class="container">
+          <div class="navbar-header">
+            <div>
+              <a
+                class="logo navbar-btn pull-left"
+                href="#"
+                title="Главная"
+                rel="home"
+              >
+                <img src="img/drupal-coder.svg" alt="Главная" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Навигация -->
+          <div class="navbar-collapse-wrapper">
+            <div class="navbar-collapse collapse">
+              <nav class="collapse navbar-collapse">
+                <ul class="menu nav navbar-nav">
+                  <li>
+                    <a href="#support">Поддержка Drupal</a>
+                  </li>
+                  <li>
+                    <a data-toggle="dropdown"
+                      >Администрирование<span class="caret"></span
+                    ></a>
+                    <ul class="menuTarif dropdown-menu">
+                      <li><a class="caretmenu" href="#tarif">Миграции</a></li>
+                      <li><a class="caretmenu" href="#tarif">Бэкапы</a></li>
+                      <li>
+                        <a class="caretmenu" href="#tarif"
+                          >Аудит безопасности</a
+                        >
+                      </li>
+                      <li>
+                        <a class="caretmenu" href="#tarif"
+                          >Оптимизация скорости</a
+                        >
+                      </li>
+                      <li>
+                        <a class="caretmenu" href="#tarif">Переезд на HTTPS</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Продвижение</a>
+                  </li>
+                  <li>
+                    <a href="#">Реклама</a>
+                  </li>
+                  <li>
+                    <a data-toggle="dropdown"
+                      >О нас<span class="caret"></span
+                    ></a>
+                    <ul class="menuTarif dropdown-menu">
+                      <li><a class="caretmenu" href="#tarif">Команда</a></li>
+                      <li><a class="caretmenu" href="#tarif">Drupalgive</a></li>
+                      <li><a class="caretmenu" href="#tarif">Блог</a></li>
+                      <li><a class="caretmenu" href="#tarif">Блог</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#cases">Проекты</a>
+                  </li>
+                  <li>
+                    <a href="#contacts">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <!-- Мобильная версия навигации -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Навигация</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Главная страница -->
+      <div>
+        <div class="block-main">
+          <!-- Задний фон -->
+          <div class="block-main-background">
+            <video
+              playsinline=""
+              autoplay="autoplay"
+              loop=""
+              class="fillWidth"
+              preload="auto"
+              muted=""
+            >
+              <source src="img/video.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <!--Текст стартовой страницы-->
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <h1 class="page-title">
+                  Поддержка <br />
+                  сайтов на Drupal
+                </h1>
+                <div class="support-main-description">
+                  Сопровождение и поддержка сайтов <br />
+                  на CMS Drupal любых версий и запущенности
+                </div>
+                <div class="block-main-wrapper">
+                  <a href="#block-tariffs" class="block-main-btn">Тарифы</a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row support-achievements">
+                  <div class="col-md-4 col-sm-4 col-xs-6 support-achievement">
+                    <div class="support-achievement-wrapper">
+                      <div class="support-achievement-title">
+                        #1
+                        <img src="img/cup.png" alt="Изображение друпликона" />
+                      </div>
+                      <div class="support-achievement-description">
+                        Drupal-разработчик <br />
+                        в России по версии <br />
+                        Рейтинга Рунета
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-6 support-achievement">
+                    <div class="support-achievement-wrapper">
+                      <div class="support-achievement-title">3+</div>
+                      <div class="support-achievement-description">
+                        средний опыт <br />
+                        специалистов более <br />
+                        3 лет
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-6 support-achievement">
+                    <div class="support-achievement-wrapper">
+                      <div class="support-achievement-title">14</div>
+                      <div class="support-achievement-description">
+                        лет опыта в сфере Drupal
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-6 support-achievement">
+                    <div class="support-achievement-wrapper">
+                      <div class="support-achievement-title">50+</div>
+                      <div class="support-achievement-description">
+                        модулей и тем <br />
+                        в формате DrupalGive
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-6 support-achievement">
+                    <div class="support-achievement-wrapper">
+                      <div class="support-achievement-title">90 000</div>
+                      <div class="support-achievement-description">
+                        часов поддержки <br />
+                        сайтов на Drupal
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-6 support-achievement">
+                    <div class="support-achievement-wrapper">
+                      <div class="support-achievement-title">300+</div>
+                      <div class="support-achievement-description">
+                        Проектов <br />
+                        на поддержке
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <!-- 13 лет - эксперты -->
+        <article about="#main">
+          <div>
+            <div class="competencies">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h2 class="block-title">
+                      13 лет совершенствуем <br />
+                      компетенции в Друпал <br />
+                      поддержке!
+                    </h2>
+                    <div class="competencies-description">
+                      Разрабатываем и оптимизируем модули, расширяем <br />
+                      функциональность сайтов, обновляем дизайн
+                    </div>
+                  </div>
+                </div>
+                <!--Блок с 8 краткими описаниями рабооты-->
+                <div class="row row-flex competencies-row">
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                      <div class="competency-wrapper">
+                        <div class="competency-header">
+                          <div class="competency-icon">
+                            <img
+                              src="img/competency-1.svg"
+                              alt="иконка соответсвуюшая блоку"
+                              class="img-responsive"
+                            />
+                          </div>
+                        </div>
+                        <div class="competency-body">
+                          Добавление <br />
+                          информации на сайт,<br />
+                          создание новых <br />
+                          разделов
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                      <div class="competency-wrapper">
+                        <div class="competency-header">
+                          <div class="competency-icon">
+                            <img
+                              src="img/competency-2.svg"
+                              alt="иконка соответсвуюшая блоку"
+                              class="img-responsive"
+                            />
+                          </div>
+                        </div>
+                        <div class="competency-body">
+                          Разработка <br />
+                          и оптимизация <br />
+                          модулей сайта
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                      <div class="competency-wrapper">
+                        <div class="competency-header">
+                          <div class="competency-icon">
+                            <img
+                              src="img/competency-3.svg"
+                              alt="иконка соответсвуюшая блоку"
+                              class="img-responsive"
+                            />
+                          </div>
+                        </div>
+                        <div class="competency-body">
+                          Интеграция с CRM, <br />
+                          1C, платежными <br />
+                          системами, любыми <br />
+                          веб-сервисами
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                      <div class="competency-wrapper">
+                        <div class="competency-header">
+                          <div class="competency-icon">
+                            <img
+                              src="img/competency-4.svg"
+                              alt="иконка соответсвуюшая блоку"
+                              class="img-responsive"
+                            />
+                          </div>
+                        </div>
+                        <div class="competency-body">
+                          Любые доработки <br />
+                          функционала <br />
+                          и дизайна
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                      <div class="competency-wrapper">
+                        <div class="competency-header">
+                          <div class="competency-icon">
+                            <img
+                              src="img/competency-5.svg"
+                              alt="иконка соответсвуюшая блоку"
+                              class="img-responsive"
+                            />
+                          </div>
+                        </div>
+                        <div class="competency-body">
+                          Аудит и мониторинг <br />
+                          безопасности Drupal <br />
+                          сайтов
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                      <div class="competency-wrapper">
+                        <div class="competency-header">
+                          <div class="competency-icon">
+                            <img
+                              src="img/competency-6.svg"
+                              alt="иконка соответсвуюшая блоку"
+                              class="img-responsive"
+                            />
+                          </div>
+                        </div>
+                        <div class="competency-body">
+                          Миграция, импорт <br />
+                          контента и апгрейд <br />
+                          Drupal
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                      <div class="competency-wrapper">
+                        <div class="competency-header">
+                          <div class="competency-icon">
+                            <img
+                              src="img/competency-7.svg"
+                              alt="иконка соответсвуюшая блоку"
+                              class="img-responsive"
+                            />
+                          </div>
+                        </div>
+                        <div class="competency-body">
+                          Оптимизация <br />
+                          и ускорение <br />
+                          Drupal-сайтов
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="competency">
+                      <div class="competency-wrapper">
+                        <div class="competency-header">
+                          <div class="competency-icon">
+                            <img
+                              src="img/competency-8.svg"
+                              alt="иконка соответсвуюшая блоку"
+                              class="img-responsive"
+                            />
+                          </div>
+                        </div>
+                        <div class="competency-body">
+                          Веб-маркетинг, <br />
+                          консультации <br />
+                          и работы по SEO
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Поддержка  от Drupal-coder-->
+            <div class="advantages with-expertise">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="block-title" id="support">
+                      Поддержка <br />
+                      от Drupal-coder
+                    </h2>
+                  </div>
+                </div>
+                <div class="row row-flex advantages-row">
+                  <div class="col-sm-6 col-md-3 col-xs-12 advantage-col">
+                    <div class="advantage">
+                      <div class="advantage-wrapper">
+                        <div class="advantage-header">
+                          <div class="advantage-num">01.</div>
+                          <div class="advantage-title">
+                            Постановка задачи по Email
+                          </div>
+                        </div>
+                        <div class="advantage-body">
+                          Удобная и привычная модель постановки задач, при
+                          которой задачи фиксируются и никогда не теряются.
+                        </div>
+                        <div class="advantage-icon">
+                          <img
+                            src="img/support1.svg"
+                            alt="иконка соответсвуюшая блоку"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3 col-xs-12 advantage-col">
+                    <div class="advantage">
+                      <div class="advantage-wrapper">
+                        <div class="advantage-header">
+                          <div class="advantage-num">02.</div>
+                          <div class="advantage-title">
+                            Система Helpdesk – отчетность, прозрачность
+                          </div>
+                        </div>
+                        <div class="advantage-body">
+                          Возможность посмотреть все заявки в работе и
+                          отработанные часы в личном кабинете через браузер.
+                        </div>
+                        <div class="advantage-icon">
+                          <img
+                            src="img/support2.svg"
+                            alt="иконка соответсвуюшая блоку"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3 col-xs-12 advantage-col">
+                    <div class="advantage">
+                      <div class="advantage-wrapper">
+                        <div class="advantage-header">
+                          <div class="advantage-num">03.</div>
+                          <div class="advantage-title">
+                            Расширенная техническая поддержка
+                          </div>
+                        </div>
+                        <div class="advantage-body">
+                          Возможность организации расширенной техподдержки с
+                          6:00 до 22:00 без выходных.
+                        </div>
+                        <div class="advantage-icon">
+                          <img
+                            src="img/support3.svg"
+                            alt="иконка соответсвуюшая блоку"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3 col-xs-12 advantage-col">
+                    <div class="advantage">
+                      <div class="advantage-wrapper">
+                        <div class="advantage-header">
+                          <div class="advantage-num">04.</div>
+                          <div class="advantage-title">
+                            Персональный менеджер проекта
+                          </div>
+                        </div>
+                        <div class="advantage-body">
+                          Ваш менеджер проекта всегда в курсе текущего состояния
+                          проекта и в любой момент готов ответить на любые
+                          вопросы.
+                        </div>
+                        <div class="advantage-icon">
+                          <img
+                            src="img/support4.svg"
+                            alt="иконка соответсвуюшая блоку"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3 col-xs-12 advantage-col">
+                    <div class="advantage">
+                      <div class="advantage-wrapper">
+                        <div class="advantage-header">
+                          <div class="advantage-num">05.</div>
+                          <div class="advantage-title">
+                            Удобные способы оплаты
+                          </div>
+                        </div>
+                        <div class="advantage-body">
+                          Безналичный расчет по договору или электронные деньги:
+                          WebMoney, Яндекс.Деньги, Paypal.
+                        </div>
+                        <div class="advantage-icon">
+                          <img
+                            src="img/support5.svg"
+                            alt="иконка соответсвуюшая блоку"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3 col-xs-12 advantage-col">
+                    <div class="advantage">
+                      <div class="advantage-wrapper">
+                        <div class="advantage-header">
+                          <div class="advantage-num">06.</div>
+                          <div class="advantage-title">
+                            Работаем с SLA <br />
+                            и NDA
+                          </div>
+                        </div>
+                        <div class="advantage-body">
+                          Работа в рамках соглашений о конфиденциальности и об
+                          уровне качества работ.
+                        </div>
+                        <div class="advantage-icon">
+                          <img
+                            src="img/support6.svg"
+                            alt="иконка соответсвуюшая блоку"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3 col-xs-12 advantage-col">
+                    <div class="advantage">
+                      <div class="advantage-wrapper">
+                        <div class="advantage-header">
+                          <div class="advantage-num">07.</div>
+                          <div class="advantage-title">
+                            Штатные <br />
+                            специалисты
+                          </div>
+                        </div>
+                        <div class="advantage-body">
+                          Надежные штатные специалисты, никаких фрилансеров.
+                        </div>
+                        <div class="advantage-icon">
+                          <img
+                            src="img/support7.svg"
+                            alt="иконка соответсвуюшая блоку"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3 col-xs-12 advantage-col">
+                    <div class="advantage">
+                      <div class="advantage-wrapper">
+                        <div class="advantage-header">
+                          <div class="advantage-num">08.</div>
+                          <div class="advantage-title">
+                            Удобные каналы <br />
+                            связи
+                          </div>
+                        </div>
+                        <div class="advantage-body">
+                          Консультации по телефону, скайпу, в месенджерах.
+                        </div>
+                        <div class="advantage-icon">
+                          <img
+                            src="img/support8.svg"
+                            alt="иконка соответсвуюшая блоку"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Экспертиза в Drupal, опыт 14 лет! -->
+            <div class="expertise">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6 col-xs-12 col-md-offset-6">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <h2 class="block-title">
+                          Экспертиза в Drupal,<br />
+                          опыт 14 лет!
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="row row-flex expertise-row">
+                      <div class="col-sm-6 col-xs-12 expertise-col">
+                        <div class="expertise-item">
+                          <div class="expertise-item-body">
+                            Только системный подход – контроль версий,
+                            резервирование и тестирование!
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-xs-12 expertise-col">
+                        <div class="expertise-item">
+                          <div class="expertise-item-body">
+                            Только Drupal сайты, не берем на поддержку сайты на
+                            других CMS!
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-xs-12 expertise-col">
+                        <div class="expertise-item">
+                          <div class="expertise-item-body">
+                            Учавствуем в разработке ядра Drupal и модулей на
+                            Drupal.org
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-xs-12 expertise-col">
+                        <div class="expertise-item">
+                          <div class="expertise-item-body">
+                            Поддерживаем сайты на Drupal 5,6,7 и 8
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="expertise-img">
+                <img
+                  class="img-responsive"
+                  alt="Картинка ноутбука"
+                  src="img/laptop.png"
+                />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Тарифы -->
+        <div id="block-tariffs">
+          <h2 class="block-title" id="tarif">Тарифы</h2>
+          <div>
+            <div class="tariffs">
+              <div class="container">
+                <div class="row row-flex tariffs-row">
+                  <div class="col-sm-4 col-xs-12 col-flex">
+                    <div class="tariff">
+                      <div class="tariff-wrapper">
+                        <div class="tariff-header">
+                          <div class="tariff-title">Стартовый</div>
+                          <br />
+                        </div>
+                        <div class="tariff-body">
+                          <div class="tarrif-body-item">
+                            Предоплата от 2 часов
+                          </div>
+                          <div class="tarrif-body-item">
+                            Консультации и работы по SEO
+                          </div>
+                          <div class="tarrif-body-item">Услуги дизайнера</div>
+                          <div class="tarrif-body-item">
+                            Стандартное время реакции
+                          </div>
+                          <div class="tarrif-body-item">
+                            Неиспользованные оплаченные часы переносятся на
+                            следующий месяц
+                          </div>
+                        </div>
+                        <div class="tariff-footer">
+                          <a
+                            href="#forma"
+                            class="contact-form tariff-footer-btn"
+                            >Оставить заявку!</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-flex col-xs-12">
+                    <div class="tariff">
+                      <div class="tariff-wrapper">
+                        <div class="tariff-header">
+                          <div class="tariff-title">Бизнес</div>
+                          <br />
+                        </div>
+                        <div class="tariff-body">
+                          <div class="tarrif-body-item">
+                            Предоплата от 10 часов
+                          </div>
+                          <div class="tarrif-body-item">
+                            Консультации и работы по SEO
+                          </div>
+                          <div class="tarrif-body-item">Услуги дизайнера</div>
+                          <div class="tarrif-body-item">
+                            Высокое время реакции - до 2 рабочих дней
+                          </div>
+                          <div class="tarrif-body-item">
+                            Неиспользованные часы не переносятся
+                          </div>
+                        </div>
+                        <div class="tariff-footer">
+                          <a
+                            href="#forma"
+                            class="contact-form tariff-footer-btn"
+                            >Оставить заявку!</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-flex col-xs-12">
+                    <div class="tariff">
+                      <div class="tariff-wrapper">
+                        <div class="tariff-header">
+                          <div class="tariff-title">VIP</div>
+                          <br />
+                        </div>
+                        <div class="tariff-body">
+                          <div class="tarrif-body-item">
+                            Предоплата от 100 часов
+                          </div>
+                          <div class="tarrif-body-item">
+                            Консультации и работы по SEO
+                          </div>
+                          <div class="tarrif-body-item">Услуги дизайнера</div>
+                          <div class="tarrif-body-item">
+                            Максимальное время реакции - в день обращения
+                          </div>
+                          <div class="tarrif-body-item">
+                            Неиспользованные часы не переносятся
+                          </div>
+                        </div>
+                        <div class="tariff-footer">
+                          <a
+                            href="#block-podderzhkasaytovkontaktnayaforma"
+                            class="contact-form tariff-footer-btn"
+                            >Оставить заявку!</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="tariffs-ps">
+                      Вам не подходят наши тарифы? Оставьте заявку и мы
+                      предложим вам индивидуальные условия!
+                      <a href="#" class="tariffs-link"
+                        >Получить индивидуальный тариф</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Последние кейсы -->
+        <div
+          class="container block block-views block-views-blockblog-block-1"
+          id="block-views-block-blog-block-1"
+        >
+          <h2 class="block-title" id="cases">Последние кейсы</h2>
+          <div class="form-group">
+            <div
+              class="inverse view view-blog view-id-blog view-display-id-block_1"
+            >
+              <div class="view-content">
+                <article about="#" class="blog keys-1">
+                  <div
+                    class="keys-wrapper"
+                    style="background-image: url(img/image1.png)"
+                  >
+                    <div
+                      class="keys-img"
+                      style="background-image: url(img/image1.png)"
+                    ></div>
+                    <div class="keys-header">
+                      <h2>
+                        <a href="#"
+                          ><span
+                            >Настройка выгрузки YML для Яндекс.Маркета</span
+                          ></a
+                        >
+                      </h2>
+                      <div class="keys-date">22.04.2019</div>
+                    </div>
+                    <div class="keys-content">
+                      <div
+                        class="field field--name-body field--label-hidden field--item"
+                      >
+                        <p>
+                          Эти слова совершенно справедливы, однако гипнотический
+                          рифф продолжает паузный пласт.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article about="#" class="blog is-promoted is-sticky keys-2">
+                  <div
+                    class="keys-wrapper"
+                    style="background-image: url(img/image2.png)"
+                  >
+                    <div class="keys-header">
+                      <h2>
+                        <a href="#"
+                          ><span
+                            >Настройка выгрузки YML для Яндекс.Маркета</span
+                          >
+                        </a>
+                      </h2>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  data-history-node-id="263"
+                  about="#"
+                  class="blog is-promoted keys-1"
+                >
+                  <div
+                    class="keys-wrapper"
+                    style="background-image: url(img/image3.png)"
+                  >
+                    <div
+                      class="keys-img"
+                      style="background-image: url(img/image3.png)"
+                    ></div>
+                    <div class="keys-header">
+                      <h2>
+                        <a href="#"
+                          ><span
+                            >Настройка выгрузки YML для Яндекс.Маркета</span
+                          ></a
+                        >
+                      </h2>
+                      <div class="keys-date">22.04.2019</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article about="#" class="blog is-promoted keys-1">
+                  <div
+                    class="keys-wrapper"
+                    style="background-image: url(img/image4.png)"
+                  >
+                    <div
+                      class="keys-img"
+                      style="background-image: url(img/image4.png)"
+                    ></div>
+                    <div class="keys-header">
+                      <h2>
+                        <a href="#"
+                          ><span
+                            >Настройка выгрузки YML для Яндекс.Маркета</span
+                          ></a
+                        >
+                      </h2>
+                      <div class="keys-date">22.04.20</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article about="#" class="blog is-promoted keys-1 clearfix">
+                  <div
+                    class="keys-wrapper"
+                    style="background-image: url(img/image56.png)"
+                  >
+                    <div
+                      class="keys-img"
+                      style="background-image: url(img/image56.png)"
+                    ></div>
+                    <div class="keys-header">
+                      <h2>
+                        <a href="#"
+                          ><span
+                            >Настройка выгрузки YML для Яндекс.Маркета
+                          </span>
+                        </a>
+                      </h2>
+                      <div class="keys-date">22.04.2019</div>
+                    </div>
+                    <div class="keys-content">
+                      <div
+                        class="field field--name-body field--label-hidden field--item"
+                      >
+                        <p>
+                          Эти слова совершенно справедливы, однако гипнотический
+                          рифф продолжает паузный пласт.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article about="#" class="blog is-promoted keys-2 clearfix">
+                  <div
+                    class="keys-wrapper"
+                    style="background-image: url(img/image2.png)"
+                  >
+                    <div class="keys-header">
+                      <h2>
+                        <a href="#"
+                          ><span
+                            >Настройка выгрузки YML для Яндекс.Маркета</span
+                          >
+                        </a>
+                      </h2>
+                    </div>
+                  </div>
+                </article>
+
+                <article about="#" class="blog is-promoted keys-1 clearfix">
+                  <div
+                    class="keys-wrapper"
+                    style="background-image: url(img/image3.png)"
+                  >
+                    <div
+                      class="keys-img"
+                      style="background-image: url(img/image3.png)"
+                    ></div>
+                    <div class="keys-header">
+                      <h2>
+                        <a href="#"
+                          ><span
+                            >Настройка выгрузки YML для Яндекс.Маркета</span
+                          ></a
+                        >
+                      </h2>
+                      <div class="keys-date">22.04.2019</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="more-link form-group">
+                <a href="#">Показать еще</a>
+              </div>
+            </div>
+          </div>
+        </div>
+	
+
+        <div
+          class="views-element-container block block-views block-views-blocktestimonials-block-1"
+          id="block-views-block-testimonials-block-1"
+        >
+          <h2 class="block-title" id="reviews">Отзывы</h2>
+          <div class="form-group">
+            <div
+              class="container view view-testimonials view-id-testimonials view-display-id-block_1"
+            >
+              <div class="view-content">
+                <div
+                  id="slick-views-testimonials-block-1-1"
+                  class="slick slick--view--testimonials slick--view--testimonials--block-1 slick--optionset--reviews"
+                >
+                  <div
+                    id="slick-views-testimonials-block-1-1-slider"
+                    class="slick__slider"
+                  >
+                    <div class="slick__slide slide slide--0">
+                      <div class="views-field views-field-field-project-logo">
+                        <div class="field-content">
+                          <img
+                            src="img/image-6.5.svg"
+                            alt="WINAMP"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-text">
+                        <div class="field-content-title">
+                          Команда Drupal Coder вызвала только положительные
+                          впечатления!
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-author">
+                        <div class="field-content">
+                          Нуреев Александр, менеджер проекта Winamp Russian
+                          Community
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slick__slide slide slide--1">
+                      <div class="views-field views-field-field-project-logo">
+                        <div class="field-content">
+                          <img
+                            src="img/cableman_ru.png"
+                            alt="cableman.ru"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Blanditiis illum doloremque reprehenderit eos
+                          cupiditate? Dolore sint magni doloribus itaque nobis
+                          veniam, sed, dicta distinctio voluptatem officia esse
+                          voluptas, sapiente quaerat.
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-author">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Atque odio molestiae pariatur voluptates minus
+                          sequi voluptate?
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slick__slide slide slide--2">
+                      <div class="views-field views-field-field-project-logo">
+                        <div class="field-content">
+                          <img
+                            src="img/lpcma_rus_v4.jpg"
+                            alt="lpcma.tsu.ru"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Debitis alias repudiandae optio obcaecati
+                          perspiciatis aspernatur aperiam architecto expedita.
+                          Accusantium, ipsa a quo hic tempora odio ratione iure
+                          voluptatibus temporibus ab molestias aliquid sequi
+                          aperiam perspiciatis quibusdam nesciunt ex beatae
+                          praesentium.
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-author">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slick__slide slide slide--3">
+                      <div class="views-field views-field-field-project-logo">
+                        <div class="field-content">
+                          <img
+                            src="img/nashagazeta_ch.png"
+                            alt="nashagazeta.ch"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Provident ex qui odio quisquam placeat iste?
+                          Odit modi sit ratione officiis, voluptate voluptates
+                          aliquid illum ad iure omnis quibusdam voluptas
+                          provident! Sit obcaecati, iusto voluptate consequatur
+                          maiores autem dolor itaque sed dolore saepe
+                          repellendus iste, corrupti possimus nam quis
+                          blanditiis odit ipsum, sapiente officiis quia?
+                          Inventore architecto placeat ad assumenda? Eius
+                          tempora iste praesentium veritatis voluptate error!
+                          Tempora, soluta est reprehenderit facere atque quos ad
+                          laborum quasi, mollitia distinctio aut? Iusto!
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-author">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit amet.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slick__slide slide slide--4">
+                      <div class="views-field views-field-field-project-logo">
+                        <div class="field-content">
+                          <img
+                            src="img/logo-estee.png"
+                            alt="estee-design.ru"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing
+                          elit. Nihil, officia distinctio! Minima harum esse
+                          ullam vero rem reiciendis praesentium totam quia, ad
+                          rerum temporibus dolor, voluptatem eius facere ipsam.
+                          Nulla sit ipsum et. Deleniti sit obcaecati quae rem
+                          voluptas, accusantium possimus quasi et vitae rerum
+                          numquam natus. Amet, maiores? Dolorum sint eos
+                          eligendi doloribus eaque harum, facilis nisi nam,
+                          omnis a, molestiae sit quae.
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-author">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Rem optio eveniet consectetur labore quibusdam
+                          cupiditate.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slick__slide slide slide--5">
+                      <div class="views-field views-field-field-project-logo">
+                        <div class="field-content">
+                          <img
+                            src="img/farbors_ru.jpg"
+                            alt="farbors.ru"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Atque optio minus quia quidem maiores provident
+                          vero, officia hic harum laboriosam architecto magnam
+                          error dicta eveniet dolor. Repellendus autem mollitia
+                          neque necessitatibus accusantium recusandae aut
+                          voluptas perspiciatis possimus sint, at voluptates
+                          laudantium officia facilis. Officia iste ipsam
+                          voluptatibus eligendi cupiditate, fuga suscipit
+                          facilis enim culpa dolore quas sed pariatur quibusdam
+                          illo eum voluptatum accusantium quis ab rem aspernatur
+                          repudiandae? Voluptatum quo accusantium ipsa assumenda
+                          sit delectus quas tempore fugiat officiis quam
+                          necessitatibus, perspiciatis ratione id pariatur
+                          dignissimos dolore repellat expedita. Reiciendis
+                          deserunt vel eum recusandae unde modi dolorem odio et
+                          quam.
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-author">
+                        <div class="field-content">Lorem ipsum dolor sit.</div>
+                      </div>
+                    </div>
+                    <div class="slick__slide slide slide--6">
+                      <div class="views-field views-field-field-project-logo">
+                        <div class="field-content">
+                          <img
+                            src="img/logo_2.png"
+                            alt="www.serebro.ag"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. In sapiente quod unde nostrum nesciunt soluta
+                          deleniti et culpa, mollitia est voluptatibus aperiam
+                          totam!
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-author">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Reiciendis.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slick__slide slide slide--7">
+                      <div class="views-field views-field-field-project-logo">
+                        <div class="field-content">
+                          <img
+                            src="img/logo.png"
+                            alt="personal-writer.com"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing
+                          elit. Ut iure perferendis culpa facilis eveniet,
+                          asperiores repellat fugiat tempora voluptates
+                          assumenda ab. Eum iusto, nesciunt distinctio provident
+                          deleniti ullam sequi libero!
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-author">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="slick__slide slide slide--8">
+                      <div class="views-field views-field-field-project-logo">
+                        <div class="field-content">
+                          <img
+                            src="img/image-6.5.svg"
+                            alt="WINAMP"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+                          Команда Drupal Coder вызвала только положительные
+                          впечатления!
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-author">
+                        <div class="field-content">
+                          Нуреев Александр, менеджер проекта Winamp Russian
+                          Community
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slick__slide slide slide--9">
+                      <div class="views-field views-field-field-project-logo">
+                        <div class="field-content">
+                          <img
+                            src="img/cableman_ru.png"
+                            alt="cableman.ru"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Blanditiis illum doloremque reprehenderit eos
+                          cupiditate? Dolore sint magni doloribus itaque nobis
+                          veniam, sed, dicta distinctio voluptatem officia esse
+                          voluptas, sapiente quaerat.
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-author">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Atque odio molestiae pariatur voluptates minus
+                          sequi voluptate?
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slick__slide slide slide--10">
+                      <div class="views-field views-field-field-project-logo">
+                        <div class="field-content">
+                          <img
+                            src="img/lpcma_rus_v4.jpg"
+                            alt="lpcma.tsu.ru"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Debitis alias repudiandae optio obcaecati
+                          perspiciatis aspernatur aperiam architecto expedita.
+                          Accusantium, ipsa a quo hic tempora odio ratione iure
+                          voluptatibus temporibus ab molestias aliquid sequi
+                          aperiam perspiciatis quibusdam nesciunt ex beatae
+                          praesentium.
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-author">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slick__slide slide slide--11">
+                      <div class="views-field views-field-field-project-logo">
+                        <div class="field-content">
+                          <img
+                            src="img/nashagazeta_ch.png"
+                            alt="nashagazeta.ch"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Provident ex qui odio quisquam placeat iste?
+                          Odit modi sit ratione officiis, voluptate voluptates
+                          aliquid illum ad iure omnis quibusdam voluptas
+                          provident! Sit obcaecati, iusto voluptate consequatur
+                          maiores autem dolor itaque sed dolore saepe
+                          repellendus iste, corrupti possimus nam quis
+                          blanditiis odit ipsum, sapiente officiis quia?
+                          Inventore architecto placeat ad assumenda? Eius
+                          tempora iste praesentium veritatis voluptate error!
+                          Tempora, soluta est reprehenderit facere atque quos ad
+                          laborum quasi, mollitia distinctio aut? Iusto!
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-author">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit amet.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slick__slide slide slide--12">
+                      <div class="views-field views-field-field-project-logo">
+                        <div class="field-content">
+                          <img
+                            src="img/logo-estee.png"
+                            alt="estee-design.ru"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing
+                          elit. Nihil, officia distinctio! Minima harum esse
+                          ullam vero rem reiciendis praesentium totam quia, ad
+                          rerum temporibus dolor, voluptatem eius facere ipsam.
+                          Nulla sit ipsum et. Deleniti sit obcaecati quae rem
+                          voluptas, accusantium possimus quasi et vitae rerum
+                          numquam natus. Amet, maiores? Dolorum sint eos
+                          eligendi doloribus eaque harum, facilis nisi nam,
+                          omnis a, molestiae sit quae.
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-author">
+                        <div class="field-content">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Rem optio eveniet consectetur labore quibusdam
+                          cupiditate.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slick__slide slide slide--13">
+                      <div class="views-field views-field-field-project-logo">
+                        <div class="field-content">
+                          <img
+                            src="img/farbors_ru.jpg"
+                            alt="farbors.ru"
+                            class="img-responsive"
+                          />
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-text">
+                        <div class="field-content">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Atque optio minus quia quidem maiores provident
+                          vero, officia hic harum laboriosam architecto magnam
+                          error dicta eveniet dolor. Repellendus autem mollitia
+                          neque necessitatibus accusantium recusandae aut
+                          voluptas perspiciatis possimus sint, at voluptates
+                          laudantium officia facilis. Officia iste ipsam
+                          voluptatibus eligendi cupiditate, fuga suscipit
+                          facilis enim culpa dolore quas sed pariatur quibusdam
+                          illo eum voluptatum accusantium quis ab rem aspernatur
+                          repudiandae? Voluptatum quo accusantium ipsa assumenda
+                          sit delectus quas tempore fugiat officiis quam
+                          necessitatibus, perspiciatis ratione id pariatur
+                          dignissimos dolore repellat expedita. Reiciendis
+                          deserunt vel eum recusandae unde modi dolorem odio et
+                          quam.
+                        </div>
+                      </div>
+                      <div class="views-field views-field-field-report-author">
+                        <div class="field-content">Lorem ipsum dolor sit.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <nav class="slick__arrow">
+                    <div class="slick__arrow-wrapper">
+                      <button
+                        class="slick-prev slick-arrow slprev"
+                        aria-label="Previous"
+                      >
+                        Previous
+                      </button>
+                      <span class="slick-slide-num"></span>
+                      <button
+                        class="slick-next slick-arrow slnext"
+                        aria-label="Next"
+                      >
+                        Next
+                      </button>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+	</div>
+<script src="assets/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/slick/slick.min.js"></script>
+    <script src="js/slick.js"></script>
+  </body>
+</html>
