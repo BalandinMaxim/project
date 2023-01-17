@@ -194,7 +194,7 @@ const app = new Vue({   //Это переменная формы, которая
             if (this.name && this.number && this.email  && this.message && this.checkbox) {  //Если все поля заполнены, то данные отправляются на сервер.
                 /*Блокировка кнопки*/ 
                 changeBtn();
-                fetch('https://api.slapform.com/zweJt9X5Rc', {
+                fetch('https://api.slapform.com/iDfzohiUV', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
                 body: JSON.stringify({name: this.name, number: this.number, email: this.email, message: this.message})
@@ -275,7 +275,7 @@ const app = new Vue({   //Это переменная формы, которая
             if (this.name && this.number && this.email  && this.message && this.checkbox) { //Этот if выполняется, если заполнены все поля
                 changeBtn_1();
                 $("#no_data").css("display", "none");
-                fetch('https://api.slapform.com/zweJt9X5Rc', {  //вызываем fetche для отправки сообщения
+                fetch('https://api.slapform.com/iDfzohiUV', {  //вызываем fetche для отправки сообщения
                 method: 'POST',
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
                 body: JSON.stringify({name: this.name, number: this.number, email: this.email, message: this.message})
