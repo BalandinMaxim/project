@@ -1,4 +1,5 @@
 @import url("stylefonts.css");
+@import url("stylefonts.css");
 
 .social-links-wrapper {
   display: none !important;
@@ -576,12 +577,6 @@
   ul {
     padding-left: 1.5em;
   }
-  .footer {
-    margin-top: 45px;
-    padding-top: 35px;
-    padding-bottom: 36px;
-    border-top: 1px solid #e5e5e5;
-  }
   p:last-child,
   .form-group:last-child {
     margin-bottom: 0;
@@ -1083,7 +1078,6 @@
     font-size: 48px;
     margin-top: -22px;
   }
-  
   #block-copyright {
     position: static;
     padding: 0;
@@ -1535,28 +1529,7 @@
     color: #505570;
     margin-bottom: 40px;
   }
-  #block-views-block-our-clients .slick-list {
-    margin: 0;
-  }
-  #block-views-block-our-clients .attachment-after .slick-track {
-    margin-left: -10%;
-  }
-  #block-views-block-our-clients .slick__slide {
-    outline: 0;
-  }
-  #block-views-block-our-clients .slick__slide .views-field-field-project-logo {
-    border: 1px solid #e5e5e5;
-    box-sizing: border-box;
-    border-radius: 5px;
-    align-items: center;
-    padding: 5px;
-    min-height: 155px;
-    height: 155px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-  }
+
   #block-views-block-testimonials-block-1 {
     margin-bottom: 160px;
     font-family: "Montserrat", sans-serif;
@@ -1624,7 +1597,73 @@
     border-radius: 5px;
     padding: 66px 0 66px 68px;
   }
- 
+  #block-views-block-testimonials-block-1 .slick:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #block-views-block-testimonials-block-1 .slick-list {
+    margin: 0;
+  }
+  #block-views-block-testimonials-block-1 .slick-slider {
+    width: 64%;
+    float: left;
+    padding-right: 60px;
+    border-right: 1px solid #cdcdcd;
+    padding: 14px 60px;
+  }
+  #block-views-block-testimonials-block-1 .slick-slide {
+    outline: 0;
+  }
+  #block-views-block-testimonials-block-1 .slick__arrow {
+    width: 36%;
+    float: left;
+    display: flex;
+  }
+  #block-views-block-testimonials-block-1 .slick__arrow-wrapper {
+    margin: auto;
+  }
+  #block-views-block-testimonials-block-1 .slick-arrow {
+    width: 16px;
+    height: 32px;
+    border: 0;
+    box-shadow: none;
+    font-size: 0;
+    outline: 0;
+  }
+  #block-views-block-testimonials-block-1 .slick-arrow.slick-prev {
+    background: url("img/arrow-left.svg") no-repeat center;
+    background-size: contain;
+  }
+  #block-views-block-testimonials-block-1 .slick-arrow.slick-next {
+    background: url("img/arrow-right.svg") no-repeat center;
+    background-size: contain;
+  }
+  #block-views-block-testimonials-block-1 .slick-slide-num {
+    display: inline-block;
+    margin: 0 46px;
+    font-size: 28px;
+    vertical-align: middle;
+    color: #e0e0e0;
+  }
+  #block-views-block-testimonials-block-1 .slick-slide-num-current {
+    color: #050c33;
+  }
+  #block-views-block-testimonials-block-1 .views-field-field-project-logo {
+    text-align: left;
+  }
+  #block-views-block-testimonials-block-1 .views-field-field-project-logo img {
+    margin: 0 0 40px;
+  }
+  #block-views-block-testimonials-block-1 .views-field-field-report-text {
+    margin-bottom: 28px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #050c33;
+    outline: 0;
+    text-decoration-line: underline;
+  }
   #block-views-block-testimonials-block-1 .views-field-field-report-author {
     font-weight: 500;
     font-size: 14px;
@@ -1825,7 +1864,6 @@
     .competencies h2,
     #block-tariffs .block-title,
     #block-views-block-team-new .block-title,
-    #block-views-block-our-clients .block-title,
     #block-views-block-testimonials-block-1 .block-title,
     #block-views-block-blog-block-1 .block-title,
     .advantages h2,
@@ -1918,30 +1956,8 @@
       right: 68px;
       top: -48px;
     }
-    #block-views-block-testimonials-block-1 .view-content:before {
-      left: 34px;
-      right: 34px;
-      top: -25px;
-    }
-    #block-views-block-testimonials-block-1 .slick {
-      display: block;
-      padding: 15px;
-    }
-    #block-views-block-testimonials-block-1 .slick-slider,
-    #block-views-block-testimonials-block-1 .slick__arrow {
-      width: 100%;
-      float: none;
-      display: block;
-      padding: 20px 15px;
-      border: 0;
-    }
-    #block-views-block-testimonials-block-1 .slick__arrow {
-      text-align: center;
-      border-top: 1px solid #cdcdcd;
-    }
-    #block-views-block-testimonials-block-1 .slick__arrow-wrapper {
-      display: inline-block;
-    }
+
+
     .keys-header h2 {
       font-size: 14px;
     }
@@ -2274,7 +2290,6 @@
     .expertise h2,
     #block-tariffs .block-title,
     #block-views-block-team-new .block-title,
-    #block-views-block-our-clients .block-title,
     #block-views-block-testimonials-block-1 .block-title,
     #block-views-block-blog-block-1 .block-title {
       font-size: 24px;
@@ -2293,9 +2308,6 @@
     }
     .field--form-value form {
       margin: auto;
-    }
-    footer {
-      background-size: cover, 165px, 140px;
     }
     .competency {
       margin-bottom: 30px;
@@ -2785,11 +2797,12 @@
     #slider_two {
         overflow: hidden;
         height: 120px;
+	border: 1px
     }
 
     #slider_one img,
     #slider_two img {
-        border: 1px solid lightgrey;
+        border: 1px solid black;
     }
 
     #slider_one {
@@ -2833,7 +2846,6 @@
         padding-left: 15px;
         padding-right: 15px;
     }
-
     input,
     textarea,
     button {
