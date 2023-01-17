@@ -2514,7 +2514,7 @@
     }
 
     #Sliders_one_and_two {
-        height: 300px;
+        height: 200px;
     }
 
     #Sliders_one_and_two p {
@@ -2526,7 +2526,7 @@
     #slider_one,
     #slider_two {
         overflow: hidden;
-        height: 120px;
+        height: 70px;
     }
 
     #slider_one img,
