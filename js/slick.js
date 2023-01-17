@@ -249,7 +249,7 @@ const app = new Vue({   //Это переменная формы, которая
             if (this.name && this.number && this.email  && this.message && this.checkbox) {  //Если все поля заполнены, то данные отправляются на сервер.
                 /*Блокировка кнопки*/ 
                 changeBtn();
-                fetch('https://formcarry.com/s/W9hnuH1Yv', {
+                fetch('https://api.slapform.com/iDfzohiUV', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
                 body: JSON.stringify({name: this.name, number: this.number, email: this.email, message: this.message})
