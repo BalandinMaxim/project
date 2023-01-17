@@ -10,18 +10,12 @@ var g1;
 var window;
 var ResizeSensor;
 var jQuery;
-/*110rightx45bottom*/
-
-
-function Admin_menu_on() {
-    $("#Admin-menu").show(300);
+function menu_on() {
+    $("#navbar-collapse collapse").show(300);
 }
-
-function Admin_menu_leave() {
-    $("#Admin-menu").hide(300);
+function menu_leave() {
+    $("#navbar-collapse collapse").hide(300);
 }
-
-
 function Mobile_menu() {
     var cmm = $("#click-menu-mobile");
     if (cmm.css("display") === "none") {
@@ -30,7 +24,6 @@ function Mobile_menu() {
         cmm.hide(300);
     }
 }
-
 function About_mobile() {
     var abmm = $("#About-menu-mobile");
     if (abmm.css("display") === "none") {
