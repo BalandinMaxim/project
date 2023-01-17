@@ -21,14 +21,6 @@ function Admin_menu_leave() {
     $("#Admin-menu").hide(300);
 }
 
-function About_menu_on() {
-    $("#About-menu").show(300);
-}
-
-function About_menu_leave() {
-    $("#About-menu").hide(300);
-}
-
 function Mobile_menu() {
     var cmm = $("#click-menu-mobile");
     if (cmm.css("display") === "none") {
