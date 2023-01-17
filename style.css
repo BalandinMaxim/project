@@ -2672,6 +2672,24 @@
         display: none;
         width: 90vw;
     }
+	    #FAQ {
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    #FAQ h1 {
+        font-size: 24px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    #FAQ ol {
+        font-size: 14px;
+        padding-left: 8%;
+        padding-right: 8%;
+        width: 84%;
+    }
 }
 @media (min-width: 560px) {
     
