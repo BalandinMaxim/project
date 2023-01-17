@@ -2490,7 +2490,7 @@
         margin-top: 260px;
         padding-top: 50px;
         width: 800px;
-        height: 450px;
+        height: 600px;
         box-shadow: 0 0 50px rgb(69, 68, 68);
         background: rgb(255, 255, 255);
         position: absolute;
@@ -2502,7 +2502,7 @@
     }
 
     #slider_three {
-        height: 400px;
+        height: 300px;
         width: 450px;
         background: rgb(255, 255, 255);
         margin-left: 8%;
