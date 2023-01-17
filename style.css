@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=cyrillic');   
 @import url("stylefonts.css");
 
 .social-links-wrapper {
@@ -2361,6 +2361,7 @@
     url("fonts/fa-brands-400.ttf") format("truetype"),
     url("fonts/fa-brands-400.svg") format("svg");
 }
+
 @media (max-width: 560px) {
     #Reviews {
         display: flex;
@@ -2518,6 +2519,24 @@
         margin-left: calc(-35vw + 15vw - 15px);
     }
 
+    #FAQ {
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    #FAQ h1 {
+        font-size: 24px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    #FAQ ol {
+        font-size: 14px;
+        padding-left: 8%;
+        padding-right: 8%;
+        width: 84%;
+    }
 
     #footer {
         width: 100%;
@@ -2686,16 +2705,6 @@
     }
 }
 @media (min-width: 560px) {
-    
-    #mess_good, #mess_error{
-        display: none;
-    }
-
-    #mess_good_1, #mess_error_1, #no_data{
-        display: none;
-        width: calc(30vw - 40px);
-    }
-
     #Reviews {
         display: flex;
         justify-content: center;
@@ -2772,6 +2781,7 @@
     }
 
     #slider_three {
+        height: 500px;
         width: 480px;
         background: rgb(255, 255, 255);
         margin-left: 8%;
@@ -2797,7 +2807,6 @@
     #slider_two {
         overflow: hidden;
         height: 120px;
-	border: 1px
     }
 
     #slider_one img,
@@ -2823,6 +2832,21 @@
         margin-left: 4px;
     }
 
+    #FAQ {
+        height: auto;
+        width: 100%;
+        margin: auto;
+    }
+
+    #FAQ h1 {
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    #FAQ ol {
+        margin: auto;
+        width: 700px;
+    }
 
     #footer {
         background: url(img/D-flying.svg) no-repeat top center, url(img/D-footer.svg) no-repeat bottom right, linear-gradient(to bottom right, rgb(4, 6, 19), rgb(29, 31, 43));
@@ -2846,6 +2870,7 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+
     input,
     textarea,
     button {
