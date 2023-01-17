@@ -10,12 +10,25 @@ var g1;
 var window;
 var ResizeSensor;
 var jQuery;
-function menu_on() {
-    $("#navbar-collapse collapse").show(300);
+/*110rightx45bottom*/
+
+
+function Admin_menu_on() {
+    $("#Admin-menu").show(300);
 }
-function menu_leave() {
-    $("#navbar-collapse collapse").hide(300);
+
+function Admin_menu_leave() {
+    $("#Admin-menu").hide(300);
 }
+
+function About_menu_on() {
+    $("#About-menu").show(300);
+}
+
+function About_menu_leave() {
+    $("#About-menu").hide(300);
+}
+
 function Mobile_menu() {
     var cmm = $("#click-menu-mobile");
     if (cmm.css("display") === "none") {
@@ -24,6 +37,16 @@ function Mobile_menu() {
         cmm.hide(300);
     }
 }
+
+function Admin_mobile() {
+    var admm = $("#Admin-menu-mobile");
+    if (admm.css("display") === "none") {
+        admm.show(300);
+    } else {
+        admm.hide(300);
+    }
+}
+
 function About_mobile() {
     var abmm = $("#About-menu-mobile");
     if (abmm.css("display") === "none") {
@@ -32,10 +55,11 @@ function About_mobile() {
         abmm.hide(300);
     }
 }
-$(document).ready(function () {  
+
+$(document).ready(function () {  //Данная функция будет выполняться после загрузки всей сраницы.
     var c;
     var a = 0;
-    $("#Reviews").css("padding-bottom", $("#Com_1").height());  
+    $("#Reviews").css("padding-bottom", $("#Com_1").height());   //Перерасчитываем размер блока с отзываеми при помощи библиотеки найденной в интернете.
     $(window).resize(function () {
         new ResizeSensor(jQuery("#Com_1"), function () {
             $("#Reviews").css("padding-bottom", $("#Com_1").height());
@@ -52,7 +76,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#slider_one").slick({   
+    $("#slider_one").slick({   //создаем первый слайдер
         accessibility: false,
         arrows: false,
         autoplay: true,
@@ -62,7 +86,7 @@ $(document).ready(function () {
         slidesToShow: 6,
         variableWidth: true
     });
-    $("#slider_two").slick({   
+    $("#slider_two").slick({   //создаем второй слайдер
         accessibility: false,
         arrows: false,
         autoplay: true,
@@ -73,7 +97,7 @@ $(document).ready(function () {
         slidesToShow: 6,
         variableWidth: true
     });
-    $("#slider_three").slick({  
+    $("#slider_three").slick({  //создаем третий слайдер
         arrows: true,
         dots: false,
         nextArrow: $("#next"),
@@ -81,10 +105,66 @@ $(document).ready(function () {
         slidesToScroll: 1,
         slidesToShow: 1
     });
+    $("#slider_three").on("afterChange", function (event, slick, currentSlide) {  //Это 3d слайдер, реализацию которого мы нашли в интернете. 
+        g = event.type;
+        g1 = slick.type;
+        $("#numb").text("0" + (currentSlide + 1));
+    });
+    $num = $(".ui-card").length;
+    $even = $num / 2;
+    $odd = ($num + 1) / 2;
+    if ($num % 2 === 0) {
+        $(".ui-card:nth-child(" + $even + ")").addClass("active");
+        $(".ui-card:nth-child(" + $even + ")").prev().addClass("prev");
+        $(".ui-card:nth-child(" + $even + ")").next().addClass("next");
+    } else {
+        $(".ui-card:nth-child(" + $odd + ")").addClass("active");
+        $(".ui-card:nth-child(" + $odd + ")").prev().addClass("prev");
+        $(".ui-card:nth-child(" + $odd + ")").next().addClass("next");
+    }
+    c = 1;
+    $(".ui-card").click(function () {
+        $slide = $(".active").width();
+        if ($(this).hasClass("next")) {
+            $(".container").stop(false, true).animate({left: "-=" + $slide});
+            c += 1;
+        } else if ($(this).hasClass("prev")) {
+            $(".container").stop(false, true).animate({left: "+=" + $slide});
+            c -= 1;
+        }
+        if (c === 0) {
+            $("#but_1").css("background", "rgb(241, 77,52)");
+            $("#but_1").css("color", "white");
+            $("#but_2").css("color", "rgb(241, 77,52)");
+            $("#but_2").css("background", "white");
+            $("#but_3").css("color", "rgb(241, 77,52)");
+            $("#but_3").css("background", "white");
+        } else if (c === 1) {
+            $("#but_2").css("background", "rgb(241, 77,52)");
+            $("#but_2").css("color", "white");
+            $("#but_1").css("color", "rgb(241, 77,52)");
+            $("#but_1").css("background", "white");
+            $("#but_3").css("color", "rgb(241, 77,52)");
+            $("#but_3").css("background", "white");
+        } else if (c === 2) {
+            $("#but_3").css("background", "rgb(241, 77,52)");
+            $("#but_3").css("color", "white");
+            $("#but_2").css("color", "rgb(241, 77,52)");
+            $("#but_2").css("background", "white");
+            $("#but_1").css("color", "rgb(241, 77,52)");
+            $("#but_1").css("background", "white");
+        }
 
-    const app = new Vue({   
-        el: '#app',   
-        data: {  
+        $(this).removeClass("prev next");
+        $(this).siblings().removeClass("prev active next");
+        $(this).addClass("active");
+        $(this).prev().addClass("prev");
+        $(this).next().addClass("next");
+    });
+
+    const app = new Vue({   //Это переменная формы, которая отображается при нажатии на кнопку связатьяс с нами.
+        el: '#app',   //id этой формы
+        data: {   //поля формы
           errors: [],
           name: null,
           number: null,
@@ -92,7 +172,8 @@ $(document).ready(function () {
           message: null,
           checkbox: null
         },
-        mounted() {     
+        mounted() {      //Этот метод берет сохраненые значения из LocalStorage и записывает их в поля.
+            if (localStorage.name) {
               this.name = localStorage.name;
             }
             if(localStorage.number){
@@ -105,7 +186,7 @@ $(document).ready(function () {
                 this.message=localStorage.message;
             }
           },
-        watch: {       
+        watch: {        //Метод который следит за заполненем полей и сохраняет значения в LocalStorage
             name(newName) {
               localStorage.name = newName;
             },
@@ -119,13 +200,13 @@ $(document).ready(function () {
                 localStorage.message = newMessage;
             }
         },
-        methods: {   
+        methods: {   //Метод вызываеиый при нажатии на кнопку "Отправить".
           checkForm: function (e) {  
             $("#mess_good").css("display", "none");
             $("#mess_error").css("display", "none");
             this.errors = [];
       
-            if (!this.name) {  
+            if (!this.name) {   //Поочередно проверям все поля на наличие данных. Если  поле не записаны данные, то заносим соответствующую запись в массив с ошибками
               this.errors.push('Требуется указать имя.');
             }
             if (!this.number) {
@@ -140,7 +221,7 @@ $(document).ready(function () {
             if (!this.checkbox) {
                 this.errors.push('Требуется согласие на обработку песрональных данных.');
             }
-            if(this.errors.length>0){   
+            if(this.errors.length>0){   //Меня размер формы в зависимости от количества ошибок.
                 if(this.errors.length === 1){
                     $("#form-overlay").css("height", "84vh");
                     $("#form-overlay").css("top", "8vh");
@@ -166,15 +247,15 @@ $(document).ready(function () {
                 $("#form-overlay").css("height", "70vh");
                 $("#form-overlay").css("top", "15vh");
             }
-            if (this.name && this.number && this.email  && this.message && this.checkbox) { 
+            if (this.name && this.number && this.email  && this.message && this.checkbox) {  //Если все поля заполнены, то данные отправляются на сервер.
                 /*Блокировка кнопки*/ 
                 changeBtn();
-                fetch('https://api.slapform.com/zweJt9X5Rc', {
+                fetch('https://formcarry.com/s/W9hnuH1Yv', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
                 body: JSON.stringify({name: this.name, number: this.number, email: this.email, message: this.message})
                 })
-                .then(function(response){  
+                .then(function(response){   //Этот метод выполняется при удачной отправке сообщения
                     console.log(response);
                     $("#mess_good").css("display", "block");
                     $("#form-overlay").css("height", "75vh");
@@ -182,7 +263,7 @@ $(document).ready(function () {
                     /*Разблокировка кнопки*/
                     changeBtn();
                 })
-                .catch(function(error){    
+                .catch(function(error){    //Этот метод выполняется при возникновении ошибки во время отправки данных.
                     console.log(error);
                     $("#mess_error").css("display", "block");
                     $("#form-overlay").css("height", "75vh");
@@ -190,7 +271,7 @@ $(document).ready(function () {
                     /*Разблокировка кнопки*/
                     changeBtn();
                 })
-                this.name=""; 
+                this.name=""; //обнуляем поля после отправки данных.
                 this.number="";
                 this.email="";
                 this.message="";
@@ -202,16 +283,16 @@ $(document).ready(function () {
       });
 
 
-    const Form = new Vue({  
+    const Form = new Vue({   //Это переменная формы, которая находится внизу страницы.
         el: '#Form_two',
-        data: {   
+        data: {   //Поля формы
           name: null,
           number: null,
           email: null,
           message: null,
           checkbox: null
         },
-        mounted() {   
+        mounted() {   //Этот метод берет сохраненые значения из LocalStorage и записывает их в поля.
             if (localStorage.name) {
               this.name = localStorage.name;
             }
@@ -225,7 +306,7 @@ $(document).ready(function () {
                 this.message=localStorage.message;
             }
           },
-        watch: { 
+        watch: {   //Метод который следит за заполненем полей и сохраняет значения в LocalStorage
             name(newName) {
               localStorage.name = newName;
             },
@@ -239,33 +320,33 @@ $(document).ready(function () {
                 localStorage.message = newMessage;
             }
         },
-        methods: {  
+        methods: {  //Метод вызываеиый при нажатии на кнопку "Отправить".
           checkForm: function (e) { 
             $("#no_data").css("display", "none");
             $("#mess_good_1").css("display", "none");
             $("#mess_error_1").css("display", "none");
-            if(!this.name || !this.number || !this.email || !this.message || !this.checkbox){  
+            if(!this.name || !this.number || !this.email || !this.message || !this.checkbox){  //Проверям введеность данных. Если хотя бы одно поле не заполнено, то поялвется надпись
                 $("#no_data").css("display", "block");
             }
-            if (this.name && this.number && this.email  && this.message && this.checkbox) { 
+            if (this.name && this.number && this.email  && this.message && this.checkbox) { //Этот if выполняется, если заполнены все поля
                 changeBtn_1();
                 $("#no_data").css("display", "none");
-                fetch('https://api.slapform.com/zweJt9X5Rc', {  
+                fetch('https://formcarry.com/s/W9hnuH1Yv', {  //вызываем fetche для отправки сообщения
                 method: 'POST',
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
                 body: JSON.stringify({name: this.name, number: this.number, email: this.email, message: this.message})
                 })
-                .then(function(response){  
+                .then(function(response){   //Этот метод выполняется при удачной отправке сообщения
                     changeBtn_1();
                     console.log(response);
                     $("#mess_good_1").css("display", "block");
                 })
-                .catch(function(error){    
+                .catch(function(error){    //Этот метод выполняется при возникновении ошибки во время отправки данных.
                     changeBtn_1();
                     console.log(error);
                     $("#mess_error_1").css("display", "block");
                 })
-                this.name="";   
+                this.name="";    //обнулям поля после отправки данных.
                 this.number="";
                 this.email="";
                 this.message="";
@@ -297,9 +378,9 @@ document.addEventListener("DOMContentLoaded", function () {
     abm.addEventListener("click", About_mobile);
 
     $("#overlay_btn").click(function () {
-        openForm();
+        openForm();//Изменение URL при закрытии формы
         
-        animate({
+        animate({//Отрисовка плавного закрытия оверлея с формой
             duration: 700,
             timing: function circ(timeFraction) {
               return 1 - Math.sin(Math.acos(timeFraction));
@@ -321,8 +402,8 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             $("#mess_good").css("display", "none");
             $("#mess_error").css("display", "none");
-            openHome();
-            animate({
+            openHome();//Изменение URL при открытии формы
+            animate({//Отрисовка плавного появления оверлея с формой
                 duration: 400,
                 timing: function circ(timeFraction) {
                 return 1 - Math.sin(Math.acos(timeFraction));
@@ -340,12 +421,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-function openForm() {   
+function openForm() {    //Эта функция вызывается при открытии формы и она изменяет ссылку.
     history.pushState({page: 2}, "Form", "?form");
     return false;
 }
 
-function openHome() {   
+function openHome() {    //Эта функция вызывается при закрытии формы и она изменяет ссылку.
     history.replaceState({page: 1}, "Home", "?home");
     return false;
 }
@@ -356,7 +437,7 @@ addEventListener("popstate", function () {
         $("#form-overlay").hide(300);
 }, false);
 
-function changeBtn() { 
+function changeBtn() { //Блокировка/разблокировка кнопки внутри оверлея
     if ($("#Lete").css("opacity") != 0.2) {
         $("#Lete").css("pointer-events", "none");
         $("#Lete").css("opacity", "0.2"); 
@@ -366,7 +447,7 @@ function changeBtn() {
     }
 }
 
-function changeBtn_1() {
+function changeBtn_1() {//Блокировка/разблокировка кнопки внизу страницы
     if ($("#Lete_1").css("opacity") != 0.2) {
         $("#Lete_1").css("pointer-events", "none");
         $("#Lete_1").css("opacity", "0.2"); 
@@ -376,18 +457,19 @@ function changeBtn_1() {
     }
 }
 
-function animate({timing, draw, duration}) {
+function animate({timing, draw, duration}) {//Сама функция отрисовки анимации
+
     let start = performance.now();
   
     requestAnimationFrame(function animate(time) {
-     
+      // timeFraction изменяется от 0 до 1
       let timeFraction = (time - start) / duration;
       if (timeFraction > 1) timeFraction = 1;
   
-      
+      // вычисление текущего состояния анимации
       let progress = timing(timeFraction);
   
-      draw(progress); 
+      draw(progress); // отрисовать её
   
       if (timeFraction < 1) {
         requestAnimationFrame(animate);
