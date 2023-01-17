@@ -1828,85 +1828,37 @@
                 </div>
                 <div class="col-md-6 col-xs-12 col-sm-6">
                   <div class="field field--form-value field--item">
-                    <form
-                      class="forms"
-                      method="POST"
-                      action="https://api.slapform.com/iDfzohiUV">               
-                      <div class="form-group form-wrapper">
-                        <div class="form-item form-type-textfield form-group">
-                          <input
-                            class="input form-control"
-                            type="text"
-                            name="Name"
-                            placeholder="Ваше имя"
-                          />
+ <div> <!--Форма-->
+                 <form id="Form_two" @submit="checkForm" action="https://api.slapform.com/iDfzohiUV" method="POST" accept-charset="UTF-8">
+                 <p id="mess_good_1" style="color: greenyellow; text-align: center;">Ваше сообщение удачно отправлено!</p>   <!--Эти три сообщения изначльно скрыты. В зависимости от ситуации может появлться одно из них-->
+                 <p id="no_data" style="color: rgb(255, 0, 0); text-align: center;">Заполните все поля!</p>
+                 <p id="mess_error_1" style="color: rgb(255, 0, 0); text-align: center;">Ваше сообщение не отправлено. Попробуйте ещё раз!</p>
+                 <p style="margin-bottom: 0px; margin-top: 0px;">
+                   <input id="form_1_name" type="text" name="name" v-model="name" placeholder="Ваше имя" maxlength="35" style="background-color: rgb(121, 135,146,0); color: white; border: 1px solid rgba(256, 256, 256, 0.3);"> <!--Это input для имени-->
+                 </p>
+                 <p style="margin-top: 0px; margin-bottom: 0px;">
+                   <input id="number_polz_1" type="text" name="number" v-model="number" placeholder="Телефон" maxlength="15" style="background-color: rgb(121, 135,146,0); color: white; border: 1px solid rgba(256, 256, 256, 0.3);"> <!--Это input для номера телефона-->
+                 </p>
+                 <p style="margin-top: 0px; margin-bottom: 0px;">
+                    <input id="email_polz_1" type="email" name="email" v-model="email" placeholder="E-mail" style="background-color: rgb(121, 135,146,0); color: white; border: 1px solid rgba(256, 256, 256, 0.3);"> <!--Это input для email-->
+                 </p>
+                 <p style="margin-top: 0px; margin-bottom: 0px;">
+                    <textarea id="message_polz_1" name="message" v-model="message" placeholder="Ваш коментарий" style="background-color: rgb(121, 135,146,0); color: white; border: 1px solid rgba(256, 256, 256, 0.3); resize: none;"></textarea> <!--Это input для коментария-->
+                 </p>
+                     <div id="Check">  <!--В этом div будет располагаться чекбокс о согласия на отправку данных и надпись-->
+                        <div id="Checkbox">
+                          <input type="checkbox" v-model="checkbox" name="checkbox" style="height: 20px; width:20px;"> <!--Это чекбокс-->
                         </div>
-                      </div>
-                      <div class="form-group form-wrapper">
-                        <div class="form-item form-type-textfield form-group">
-                          <input
-                            class="input required form-control"
-                            type="text"
-                            name="Telephone"
-                            placeholder="Телефон"
-                            required="required"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group form-wrapper">
-                        <div class="form-item form-type-email form-group">
-                          <input
-                            class="input form-email required form-control"
-                            type="email"
-                            name="Email"
-                            placeholder="E-mail"
-                            required="required"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group form-wrapper">
-                        <div class="form-item form-type-textarea">
-                          <div>
-                            <textarea
-                              class="input form-control"
-                              name="msg"
-                              rows="5"
-                              cols="60"
-                              placeholder="Ваш комментарий"
-                            ></textarea>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-item form-type-checkbox checkbox">
-                        <label class="control-label option form-required">
-                          <input
-                            required="required"
-                            class="form-checkbox"
-                            type="checkbox"
-                            name="consent"
-                            value="1"
-                          />
-                          <span class="custom-checkbox"></span>Отправляя заявку,
-                          я даю согласие на
-                          <a id="policy" href="#"
-                            >обработку своих персональных данных.</a
-                          ></label
-                        >
-                      </div>
-                      <div class="form-actions form-group form-wrapper">
-                        <button
-                          class="button form-submit btn-primary btn"
-                          type="submit"
-                          id="edit-submit"
-                          name="submit"
-                          value="Оставить заявку!"
-                        >
-                          Оставить заявку!
-                        </button>
-                      </div>
-                    </form>
+                        <div>
+                         <label id="Label_3" style="color: rgb(121, 135,146);"> Отправляя заявку, я даю согласие на <a style="color: red;">обработку своих <br>персональных данных</a>.</label>  
+                       </div>
                   </div>
+                  <p style="text-align: left;">
+                      <input id="Lete_1" type="submit" value="Отправить" style="background-color: rgb(241, 77,52); color: white; margin-bottom: 7px; border: 1px solid rgba(256, 256, 256, 0.3); border-radius: 5px; border: 1px solid rgba(256, 256, 256, 0.3);">
+                   </p>
+                  </form>
                 </div>
+               </div>
               </div>
             </div>
 
