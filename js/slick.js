@@ -1,37 +1,3 @@
-
-$("#slick-views-our-clients-attachment-1-3-slider").slick({
-  mobileFirst: false,
-  autoplay: true,
-  infinite: true,
-  pauseOnHover: false,
-  arrows: false,
-  slidesToShow: 5,
-  centerMode: true,
-  centerPadding: "10%",
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        autoplay: true,
-        pauseOnHover: false,
-        arrows: false,
-        slidesToShow: 3,
-        waitForAnimate: false,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        autoplay: true,
-        pauseOnHover: false,
-        arrows: false,
-        slidesToShow: 2,
-        waitForAnimate: false,
-      },
-    },
-  ],
-});
-
 var document;
 var $;
 var $num;
@@ -195,8 +161,7 @@ $(document).ready(function () {  //Данная функция будет вып
         $(this).prev().addClass("prev");
         $(this).next().addClass("next");
     });
-
-    const app = new Vue({   //Это переменная формы, которая отображается при нажатии на кнопку связатьяс с нами.
+const app = new Vue({   //Это переменная формы, которая отображается при нажатии на кнопку связатьяс с нами.
         el: '#app',   //id этой формы
         data: {   //поля формы
           errors: [],
@@ -284,7 +249,7 @@ $(document).ready(function () {  //Данная функция будет вып
             if (this.name && this.number && this.email  && this.message && this.checkbox) {  //Если все поля заполнены, то данные отправляются на сервер.
                 /*Блокировка кнопки*/ 
                 changeBtn();
-                fetch('https://formcarry.com/s/W9hnuH1Yv', {
+                fetch('https://api.slapform.com/zweJt9X5Rc', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
                 body: JSON.stringify({name: this.name, number: this.number, email: this.email, message: this.message})
@@ -365,7 +330,7 @@ $(document).ready(function () {  //Данная функция будет вып
             if (this.name && this.number && this.email  && this.message && this.checkbox) { //Этот if выполняется, если заполнены все поля
                 changeBtn_1();
                 $("#no_data").css("display", "none");
-                fetch('https://formcarry.com/s/W9hnuH1Yv', {  //вызываем fetche для отправки сообщения
+                fetch('https://api.slapform.com/zweJt9X5Rc', {  //вызываем fetche для отправки сообщения
                 method: 'POST',
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
                 body: JSON.stringify({name: this.name, number: this.number, email: this.email, message: this.message})
