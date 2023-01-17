@@ -1,3 +1,16 @@
+var document;
+var $;
+var $num;
+var $even;
+var $odd;
+var console;
+var $slide;
+var g;
+var g1;
+var window;
+var ResizeSensor;
+var jQuery;
+
 $("#slick-views-testimonials-block-1-1").on(
   "init reInit afterChange",
   function (event, slick, currentSlide, nextSlide) {
