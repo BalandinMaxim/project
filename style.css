@@ -2514,19 +2514,19 @@
     }
 
     #Sliders_one_and_two {
-        height: 1000px;
+        height: 500px;
     }
 
     #Sliders_one_and_two p {
         width: 700px;
         margin: auto;
-        margin-bottom: 35px;
+        margin-bottom: 50px;
     }
 
     #slider_one,
     #slider_two {
         overflow: hidden;
-        height: 70px;
+        height: 50px;
     }
 
     #slider_one img,
