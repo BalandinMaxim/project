@@ -13,30 +13,36 @@ var jQuery;
 /*110rightx45bottom*/
 
 
-function menu_on() {
-    $("#navbar-collapse collapse").show(300);
+function Admin_menu_on() {
+    $("#Admin-menu").show(300);
 }
 
-function menu_leave() {
-    $("#navbar-collapse collapse").hide(300);
+function Admin_menu_leave() {
+    $("#Admin-menu").hide(300);
 }
 
 
-
-function Admin_mobile() {
-    var admm = $("#navbar-collapse collapse");
-    if (admm.css("display") === "none") {
-        admm.show(300);
+function Mobile_menu() {
+    var cmm = $("#click-menu-mobile");
+    if (cmm.css("display") === "none") {
+        cmm.show(300);
     } else {
-        admm.hide(300);
+        cmm.hide(300);
     }
 }
 
-
-$(document).ready(function () {  //Данная функция будет выполняться после загрузки всей сраницы.
+function About_mobile() {
+    var abmm = $("#About-menu-mobile");
+    if (abmm.css("display") === "none") {
+        abmm.show(300);
+    } else {
+        abmm.hide(300);
+    }
+}
+$(document).ready(function () {  
     var c;
     var a = 0;
-    $("#Reviews").css("padding-bottom", $("#Com_1").height());   
+    $("#Reviews").css("padding-bottom", $("#Com_1").height());  
     $(window).resize(function () {
         new ResizeSensor(jQuery("#Com_1"), function () {
             $("#Reviews").css("padding-bottom", $("#Com_1").height());
@@ -53,7 +59,7 @@ $(document).ready(function () {  //Данная функция будет вып
         }
     });
 
-    $("#slider_one").slick({   //создаем первый слайдер
+    $("#slider_one").slick({   
         accessibility: false,
         arrows: false,
         autoplay: true,
@@ -63,7 +69,7 @@ $(document).ready(function () {  //Данная функция будет вып
         slidesToShow: 6,
         variableWidth: true
     });
-    $("#slider_two").slick({   //создаем второй слайдер
+    $("#slider_two").slick({   
         accessibility: false,
         arrows: false,
         autoplay: true,
@@ -74,7 +80,7 @@ $(document).ready(function () {  //Данная функция будет вып
         slidesToShow: 6,
         variableWidth: true
     });
-    $("#slider_three").slick({  //создаем третий слайдер
+    $("#slider_three").slick({  
         arrows: true,
         dots: false,
         nextArrow: $("#next"),
@@ -82,10 +88,10 @@ $(document).ready(function () {  //Данная функция будет вып
         slidesToScroll: 1,
         slidesToShow: 1
     });
-   
-const app = new Vue({   
+
+    const app = new Vue({   
         el: '#app',   
-        data: {   
+        data: {  
           errors: [],
           name: null,
           number: null,
@@ -93,8 +99,7 @@ const app = new Vue({
           message: null,
           checkbox: null
         },
-        mounted() {      
-            if (localStorage.name) {
+        mounted() {     
               this.name = localStorage.name;
             }
             if(localStorage.number){
@@ -107,7 +112,7 @@ const app = new Vue({
                 this.message=localStorage.message;
             }
           },
-        watch: {        
+        watch: {       
             name(newName) {
               localStorage.name = newName;
             },
@@ -168,7 +173,7 @@ const app = new Vue({
                 $("#form-overlay").css("height", "70vh");
                 $("#form-overlay").css("top", "15vh");
             }
-            if (this.name && this.number && this.email  && this.message && this.checkbox) {  
+            if (this.name && this.number && this.email  && this.message && this.checkbox) { 
                 /*Блокировка кнопки*/ 
                 changeBtn();
                 fetch('https://api.slapform.com/zweJt9X5Rc', {
@@ -176,7 +181,7 @@ const app = new Vue({
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
                 body: JSON.stringify({name: this.name, number: this.number, email: this.email, message: this.message})
                 })
-                .then(function(response){   
+                .then(function(response){  
                     console.log(response);
                     $("#mess_good").css("display", "block");
                     $("#form-overlay").css("height", "75vh");
@@ -206,7 +211,7 @@ const app = new Vue({
 
     const Form = new Vue({  
         el: '#Form_two',
-        data: {  
+        data: {   
           name: null,
           number: null,
           email: null,
@@ -227,7 +232,7 @@ const app = new Vue({
                 this.message=localStorage.message;
             }
           },
-        watch: {  
+        watch: { 
             name(newName) {
               localStorage.name = newName;
             },
@@ -257,7 +262,7 @@ const app = new Vue({
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
                 body: JSON.stringify({name: this.name, number: this.number, email: this.email, message: this.message})
                 })
-                .then(function(response){   
+                .then(function(response){  
                     changeBtn_1();
                     console.log(response);
                     $("#mess_good_1").css("display", "block");
@@ -286,8 +291,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var adm;
     var abm;
     var b = document.getElementById("Admin");
-    b.addEventListener("mouseover", menu_on);
-    b.addEventListener("mouseleave", menu_leave);
+    b.addEventListener("mouseover", Admin_menu_on);
+    b.addEventListener("mouseleave", Admin_menu_leave);
     b1 = document.getElementById("About");
     b1.addEventListener("mouseover", About_menu_on);
     b1.addEventListener("mouseleave", About_menu_leave);
@@ -323,8 +328,8 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             $("#mess_good").css("display", "none");
             $("#mess_error").css("display", "none");
-            openHome();//Изменение URL при открытии формы
-            animate({//Отрисовка плавного появления оверлея с формой
+            openHome();
+            animate({
                 duration: 400,
                 timing: function circ(timeFraction) {
                 return 1 - Math.sin(Math.acos(timeFraction));
@@ -342,12 +347,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-function openForm() {    //Эта функция вызывается при открытии формы и она изменяет ссылку.
+function openForm() {   
     history.pushState({page: 2}, "Form", "?form");
     return false;
 }
 
-function openHome() {    //Эта функция вызывается при закрытии формы и она изменяет ссылку.
+function openHome() {   
     history.replaceState({page: 1}, "Home", "?home");
     return false;
 }
@@ -379,18 +384,21 @@ function changeBtn_1() {
 }
 
 function animate({timing, draw, duration}) {
-
     let start = performance.now();
   
     requestAnimationFrame(function animate(time) {
+     
       let timeFraction = (time - start) / duration;
       if (timeFraction > 1) timeFraction = 1;
+  
+      
       let progress = timing(timeFraction);
+  
       draw(progress); 
+  
       if (timeFraction < 1) {
         requestAnimationFrame(animate);
       }
+  
     });
 }
-
-
