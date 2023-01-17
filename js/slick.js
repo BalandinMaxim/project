@@ -13,25 +13,18 @@ var jQuery;
 /*110rightx45bottom*/
 
 
-function Admin_menu_on() {
-    $("#Admin-menu").show(300);
+function menu_on() {
+    $("#navbar-collapse collapse").show(300);
 }
 
-function Admin_menu_leave() {
-    $("#Admin-menu").hide(300);
+function menu_leave() {
+    $("#navbar-collapse collapse").hide(300);
 }
 
-function Mobile_menu() {
-    var cmm = $("#click-menu-mobile");
-    if (cmm.css("display") === "none") {
-        cmm.show(300);
-    } else {
-        cmm.hide(300);
-    }
-}
+
 
 function Admin_mobile() {
-    var admm = $("#Admin-menu-mobile");
+    var admm = $("#navbar-collapse collapse");
     if (admm.css("display") === "none") {
         admm.show(300);
     } else {
@@ -39,19 +32,11 @@ function Admin_mobile() {
     }
 }
 
-function About_mobile() {
-    var abmm = $("#About-menu-mobile");
-    if (abmm.css("display") === "none") {
-        abmm.show(300);
-    } else {
-        abmm.hide(300);
-    }
-}
 
 $(document).ready(function () {  //Данная функция будет выполняться после загрузки всей сраницы.
     var c;
     var a = 0;
-    $("#Reviews").css("padding-bottom", $("#Com_1").height());   //Перерасчитываем размер блока с отзываеми при помощи библиотеки найденной в интернете.
+    $("#Reviews").css("padding-bottom", $("#Com_1").height());   
     $(window).resize(function () {
         new ResizeSensor(jQuery("#Com_1"), function () {
             $("#Reviews").css("padding-bottom", $("#Com_1").height());
@@ -98,9 +83,9 @@ $(document).ready(function () {  //Данная функция будет вып
         slidesToShow: 1
     });
    
-const app = new Vue({   //Это переменная формы, которая отображается при нажатии на кнопку связатьяс с нами.
-        el: '#app',   //id этой формы
-        data: {   //поля формы
+const app = new Vue({   
+        el: '#app',   
+        data: {   
           errors: [],
           name: null,
           number: null,
@@ -108,7 +93,7 @@ const app = new Vue({   //Это переменная формы, которая
           message: null,
           checkbox: null
         },
-        mounted() {      //Этот метод берет сохраненые значения из LocalStorage и записывает их в поля.
+        mounted() {      
             if (localStorage.name) {
               this.name = localStorage.name;
             }
@@ -122,7 +107,7 @@ const app = new Vue({   //Это переменная формы, которая
                 this.message=localStorage.message;
             }
           },
-        watch: {        //Метод который следит за заполненем полей и сохраняет значения в LocalStorage
+        watch: {        
             name(newName) {
               localStorage.name = newName;
             },
@@ -136,13 +121,13 @@ const app = new Vue({   //Это переменная формы, которая
                 localStorage.message = newMessage;
             }
         },
-        methods: {   //Метод вызываеиый при нажатии на кнопку "Отправить".
+        methods: {   
           checkForm: function (e) {  
             $("#mess_good").css("display", "none");
             $("#mess_error").css("display", "none");
             this.errors = [];
       
-            if (!this.name) {   //Поочередно проверям все поля на наличие данных. Если  поле не записаны данные, то заносим соответствующую запись в массив с ошибками
+            if (!this.name) {  
               this.errors.push('Требуется указать имя.');
             }
             if (!this.number) {
@@ -157,7 +142,7 @@ const app = new Vue({   //Это переменная формы, которая
             if (!this.checkbox) {
                 this.errors.push('Требуется согласие на обработку песрональных данных.');
             }
-            if(this.errors.length>0){   //Меня размер формы в зависимости от количества ошибок.
+            if(this.errors.length>0){   
                 if(this.errors.length === 1){
                     $("#form-overlay").css("height", "84vh");
                     $("#form-overlay").css("top", "8vh");
@@ -183,7 +168,7 @@ const app = new Vue({   //Это переменная формы, которая
                 $("#form-overlay").css("height", "70vh");
                 $("#form-overlay").css("top", "15vh");
             }
-            if (this.name && this.number && this.email  && this.message && this.checkbox) {  //Если все поля заполнены, то данные отправляются на сервер.
+            if (this.name && this.number && this.email  && this.message && this.checkbox) {  
                 /*Блокировка кнопки*/ 
                 changeBtn();
                 fetch('https://api.slapform.com/zweJt9X5Rc', {
@@ -191,7 +176,7 @@ const app = new Vue({   //Это переменная формы, которая
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
                 body: JSON.stringify({name: this.name, number: this.number, email: this.email, message: this.message})
                 })
-                .then(function(response){   //Этот метод выполняется при удачной отправке сообщения
+                .then(function(response){   
                     console.log(response);
                     $("#mess_good").css("display", "block");
                     $("#form-overlay").css("height", "75vh");
@@ -199,7 +184,7 @@ const app = new Vue({   //Это переменная формы, которая
                     /*Разблокировка кнопки*/
                     changeBtn();
                 })
-                .catch(function(error){    //Этот метод выполняется при возникновении ошибки во время отправки данных.
+                .catch(function(error){    
                     console.log(error);
                     $("#mess_error").css("display", "block");
                     $("#form-overlay").css("height", "75vh");
@@ -207,7 +192,7 @@ const app = new Vue({   //Это переменная формы, которая
                     /*Разблокировка кнопки*/
                     changeBtn();
                 })
-                this.name=""; //обнуляем поля после отправки данных.
+                this.name=""; 
                 this.number="";
                 this.email="";
                 this.message="";
@@ -219,16 +204,16 @@ const app = new Vue({   //Это переменная формы, которая
       });
 
 
-    const Form = new Vue({   //Это переменная формы, которая находится внизу страницы.
+    const Form = new Vue({  
         el: '#Form_two',
-        data: {   //Поля формы
+        data: {  
           name: null,
           number: null,
           email: null,
           message: null,
           checkbox: null
         },
-        mounted() {   //Этот метод берет сохраненые значения из LocalStorage и записывает их в поля.
+        mounted() {   
             if (localStorage.name) {
               this.name = localStorage.name;
             }
@@ -242,7 +227,7 @@ const app = new Vue({   //Это переменная формы, которая
                 this.message=localStorage.message;
             }
           },
-        watch: {   //Метод который следит за заполненем полей и сохраняет значения в LocalStorage
+        watch: {  
             name(newName) {
               localStorage.name = newName;
             },
@@ -256,33 +241,33 @@ const app = new Vue({   //Это переменная формы, которая
                 localStorage.message = newMessage;
             }
         },
-        methods: {  //Метод вызываеиый при нажатии на кнопку "Отправить".
+        methods: {  
           checkForm: function (e) { 
             $("#no_data").css("display", "none");
             $("#mess_good_1").css("display", "none");
             $("#mess_error_1").css("display", "none");
-            if(!this.name || !this.number || !this.email || !this.message || !this.checkbox){  //Проверям введеность данных. Если хотя бы одно поле не заполнено, то поялвется надпись
+            if(!this.name || !this.number || !this.email || !this.message || !this.checkbox){  
                 $("#no_data").css("display", "block");
             }
-            if (this.name && this.number && this.email  && this.message && this.checkbox) { //Этот if выполняется, если заполнены все поля
+            if (this.name && this.number && this.email  && this.message && this.checkbox) { 
                 changeBtn_1();
                 $("#no_data").css("display", "none");
-                fetch('https://api.slapform.com/zweJt9X5Rc', {  //вызываем fetche для отправки сообщения
+                fetch('https://api.slapform.com/zweJt9X5Rc', {  
                 method: 'POST',
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
                 body: JSON.stringify({name: this.name, number: this.number, email: this.email, message: this.message})
                 })
-                .then(function(response){   //Этот метод выполняется при удачной отправке сообщения
+                .then(function(response){   
                     changeBtn_1();
                     console.log(response);
                     $("#mess_good_1").css("display", "block");
                 })
-                .catch(function(error){    //Этот метод выполняется при возникновении ошибки во время отправки данных.
+                .catch(function(error){    
                     changeBtn_1();
                     console.log(error);
                     $("#mess_error_1").css("display", "block");
                 })
-                this.name="";    //обнулям поля после отправки данных.
+                this.name="";   
                 this.number="";
                 this.email="";
                 this.message="";
@@ -301,8 +286,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var adm;
     var abm;
     var b = document.getElementById("Admin");
-    b.addEventListener("mouseover", Admin_menu_on);
-    b.addEventListener("mouseleave", Admin_menu_leave);
+    b.addEventListener("mouseover", menu_on);
+    b.addEventListener("mouseleave", menu_leave);
     b1 = document.getElementById("About");
     b1.addEventListener("mouseover", About_menu_on);
     b1.addEventListener("mouseleave", About_menu_leave);
@@ -314,9 +299,9 @@ document.addEventListener("DOMContentLoaded", function () {
     abm.addEventListener("click", About_mobile);
 
     $("#overlay_btn").click(function () {
-        openForm();//Изменение URL при закрытии формы
+        openForm();
         
-        animate({//Отрисовка плавного закрытия оверлея с формой
+        animate({
             duration: 700,
             timing: function circ(timeFraction) {
               return 1 - Math.sin(Math.acos(timeFraction));
@@ -373,7 +358,7 @@ addEventListener("popstate", function () {
         $("#form-overlay").hide(300);
 }, false);
 
-function changeBtn() { //Блокировка/разблокировка кнопки внутри оверлея
+function changeBtn() { 
     if ($("#Lete").css("opacity") != 0.2) {
         $("#Lete").css("pointer-events", "none");
         $("#Lete").css("opacity", "0.2"); 
@@ -383,7 +368,7 @@ function changeBtn() { //Блокировка/разблокировка кно�
     }
 }
 
-function changeBtn_1() {//Блокировка/разблокировка кнопки внизу страницы
+function changeBtn_1() {
     if ($("#Lete_1").css("opacity") != 0.2) {
         $("#Lete_1").css("pointer-events", "none");
         $("#Lete_1").css("opacity", "0.2"); 
@@ -393,24 +378,18 @@ function changeBtn_1() {//Блокировка/разблокировка кно
     }
 }
 
-function animate({timing, draw, duration}) {//Сама функция отрисовки анимации
+function animate({timing, draw, duration}) {
 
     let start = performance.now();
   
     requestAnimationFrame(function animate(time) {
-      // timeFraction изменяется от 0 до 1
       let timeFraction = (time - start) / duration;
       if (timeFraction > 1) timeFraction = 1;
-  
-      // вычисление текущего состояния анимации
       let progress = timing(timeFraction);
-  
-      draw(progress); // отрисовать её
-  
+      draw(progress); 
       if (timeFraction < 1) {
         requestAnimationFrame(animate);
       }
-  
     });
 }
 
