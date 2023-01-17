@@ -105,62 +105,7 @@ $(document).ready(function () {  //Данная функция будет вып
         slidesToScroll: 1,
         slidesToShow: 1
     });
-    $("#slider_three").on("afterChange", function (event, slick, currentSlide) {  //Это 3d слайдер, реализацию которого мы нашли в интернете. 
-        g = event.type;
-        g1 = slick.type;
-        $("#numb").text("0" + (currentSlide + 1));
-    });
-    $num = $(".ui-card").length;
-    $even = $num / 2;
-    $odd = ($num + 1) / 2;
-    if ($num % 2 === 0) {
-        $(".ui-card:nth-child(" + $even + ")").addClass("active");
-        $(".ui-card:nth-child(" + $even + ")").prev().addClass("prev");
-        $(".ui-card:nth-child(" + $even + ")").next().addClass("next");
-    } else {
-        $(".ui-card:nth-child(" + $odd + ")").addClass("active");
-        $(".ui-card:nth-child(" + $odd + ")").prev().addClass("prev");
-        $(".ui-card:nth-child(" + $odd + ")").next().addClass("next");
-    }
-    c = 1;
-    $(".ui-card").click(function () {
-        $slide = $(".active").width();
-        if ($(this).hasClass("next")) {
-            $(".container").stop(false, true).animate({left: "-=" + $slide});
-            c += 1;
-        } else if ($(this).hasClass("prev")) {
-            $(".container").stop(false, true).animate({left: "+=" + $slide});
-            c -= 1;
-        }
-        if (c === 0) {
-            $("#but_1").css("background", "rgb(241, 77,52)");
-            $("#but_1").css("color", "white");
-            $("#but_2").css("color", "rgb(241, 77,52)");
-            $("#but_2").css("background", "white");
-            $("#but_3").css("color", "rgb(241, 77,52)");
-            $("#but_3").css("background", "white");
-        } else if (c === 1) {
-            $("#but_2").css("background", "rgb(241, 77,52)");
-            $("#but_2").css("color", "white");
-            $("#but_1").css("color", "rgb(241, 77,52)");
-            $("#but_1").css("background", "white");
-            $("#but_3").css("color", "rgb(241, 77,52)");
-            $("#but_3").css("background", "white");
-        } else if (c === 2) {
-            $("#but_3").css("background", "rgb(241, 77,52)");
-            $("#but_3").css("color", "white");
-            $("#but_2").css("color", "rgb(241, 77,52)");
-            $("#but_2").css("background", "white");
-            $("#but_1").css("color", "rgb(241, 77,52)");
-            $("#but_1").css("background", "white");
-        }
-
-        $(this).removeClass("prev next");
-        $(this).siblings().removeClass("prev active next");
-        $(this).addClass("active");
-        $(this).prev().addClass("prev");
-        $(this).next().addClass("next");
-    });
+   
 const app = new Vue({   //Это переменная формы, которая отображается при нажатии на кнопку связатьяс с нами.
         el: '#app',   //id этой формы
         data: {   //поля формы
