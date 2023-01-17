@@ -2427,7 +2427,1188 @@
     url("fonts/fa-brands-400.svg") format("svg");
 }
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=cyrillic');    
+
+body {
+    padding:0;
+    margin: 0;
+    font-family: 'Montserrat';
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat Regular'), local('Montserrat-Regular'), url('http://hb.bizmrg.com/fonts/montserrat/400.woff2') format('woff2'), url('http://hb.bizmrg.com/fonts/montserrat/400.woff') format('woff');
+}  
+.fullscreen-bg {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-top:45%;
+}
+ 
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+.overlay > * {
+    margin-left: 6%;
+}
+#Drupal {
+    margin-top: -2vh;
+}
+#Drupal, #sup-drupal, #Admin, #Prodvig, #Advertise, #About, #Projects {
+    margin-right: 2vh;
+    transition: all .25s;
+}
+#Contacts{
+    transition: all .25s;
+}
+#Drupal:hover, #sup-drupal:hover, #Prodvig:hover, #Advertise:hover, #Projects:hover, #Contacts:hover {
+    text-decoration: underline 5px rgb(241,77,52);
+
+}
+.menu {
+    display: flex;
+    width: 94%;
+    margin-top: 5vw;
+    text-align: center;
+}
+.menu_2 {
+    display: flex;
+    margin-top: 50px;
+}
+.exp {
+    border-left: 5px solid rgb(241,77,52);
+    width: 150px;
+    margin-right: 100px;
+    margin-top: 100px;
+    padding-left: 15px; 
+}
+.exp_new{
+    border-left: 5px solid rgb(241,77,52);
+    width: 150px;
+    margin-right: 100px;
+    margin-top: 100px;
+    padding-left: 15px; 
+    color: rgb(89, 106, 130);
+    overflow: hidden;
+	word-wrap: break-word;
+	height: 50%;
+}
+#tarif {
+    width:200px;
+    height: 50px;
+    border: 2px solid rgb(241,77,52);
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.exp_menu {
+    margin-left: 5%;
+    margin-top: -50px;
+}
+#exp_2, #exp_3 {
+    padding-top: 27px;
+}
+h1 {
+    margin: 0;
+}
+.competency {
+    max-width: 100%;
+    height: 1200px;
+    padding-left: 12%;
+    padding-top: 35px;
+    overflow: hidden;
+}
+.competency_img {
+    position: relative;
+    width: 170px;
+    margin-right: 150px;
+    margin-top: 75px;
+}
+.competency_img::after {
+    content: "";
+    background: url(img/drupal-coder.svg) no-repeat;
+    opacity: 0.1;
+    top: 10px;
+    left: -75px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;  
+    background-size: 700px; 
+}
+
+.pod-drupal-flex {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-300px);
+    align-items: center;
+    max-width: 100%;
+}
+.pod-drupal-flex-img {
+    display: flex;
+}
+.color-blue {
+    color: rgb(4,12,55);
+}
+.color-grey {
+    color: rgb(89, 106, 130);
+}
+.pod-support {
+    width: calc(25% - 3px);
+    height: 350px;  
+    border-radius: 1%;
+    margin-left: 3px;
+    padding-left: 15px;
+    border: .02px solid rgba(241, 241, 241, 0.705);
+    word-wrap: break-word;
+    overflow-y: hidden;
+}
+#pod-support1 {
+    background: url(img/support1.svg) no-repeat bottom right, white;
+}
+#pod-support2 {
+    background: url(img/support2.svg) no-repeat bottom right, white;
+}
+#pod-support3 {
+    background: url(img/support3.svg) no-repeat bottom right, white;
+}
+#pod-support4 {
+    background: url(img/support4.svg) no-repeat bottom right, white;
+}
+#pod-support5 {
+    background: url(img/support5.svg) no-repeat bottom right, white;
+}
+#pod-support6 {
+    background: url(img/support6.svg) no-repeat bottom right, white;
+}
+#pod-support7 {
+    background: url(img/support7.svg) no-repeat bottom right, white;
+}
+#pod-support8 {
+    background: url(img/support8.svg) no-repeat bottom right, white;
+}
+#Admin-menu, #About-menu {
+    background: rgb(241,77,52);
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    display: none;
+}
+.Admin-menu, .About-menu {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    max-width:100%;
+}
+.Admin-menu:hover, .About-menu:hover {
+    background: rgb(209, 48, 24);
+    text-decoration: none;
+}
+
+.pod-drupal-flex {
+    width: 65%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.pod-drupal-flex-img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.pod-support > * {
+    width: calc(100% - 15px);
+    max-width: calc(100% - 15px);
+}
+
+#overlay_btn:hover, #Lete, #Lete_1 {
+    cursor: pointer;
+}
+/*---- Mobile settings ----*/
+.mobile-menu {
+    background-color: black;
+    width: 100%;
+    font-size: 15px;
+    height: auto; 
+    color: white;
+    display: none;
+}  
+
+.poz-mobile {
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 15px;
+    border-bottom: .5px solid rgb(146, 145, 145);
+}
+
+.click-menu-mobile {
+    height: 470px;
+    display: none;
+    overflow: scroll;
+}
+#About-menu-mobile {
+    display: none;
+    padding-left: 30px;
+}
+#Admin-menu-mobile {
+    display: none;
+    padding-left: 30px;
+}
+
+.text-com {
+    width: 500px;
+}
+.exp-with-lap {
+    display: flex;
+    height: 50%;
+}
+.exp-with-lap-mobile {
+    display: none;
+}
+
+.List li{
+    list-style-type: none;
+}
+
+.List li::before{
+    content: url(img/ok.png);
+}
+
+.container {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    position: relative;
+}
+.container .ui-card {
+    height: 20rem;
+    width: 12rem;
+    position: relative;
+    z-index: 1;
+    -webkit-transform: scale(0.6) translateY(-2rem);
+            transform: scale(0.6) translateY(-2rem);
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: none;
+    background: #2e5266;
+    background: linear-gradient(to top, #2e5266, #6e8898);
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  
+  .container .ui-card.active {
+    z-index: 3;
+    -webkit-transform: scale(1) translateY(0) translateX(0);
+            transform: scale(1) translateY(0) translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .container .ui-card.prev,
+  .container .ui-card.next {
+    z-index: 2;
+    -webkit-transform: scale(0.8) translateY(-1rem) translateX(0);
+            transform: scale(0.8) translateY(-1rem) translateX(0);
+    opacity: 0.6;
+    pointer-events: auto;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+details > summary {
+    list-style: none;
+  }
+details > summary::marker {
+    display: none;
+}
+
+li{
+    margin-bottom: 15px;
+}
+.exp_menu_mobile {
+    display: none;
+}
+.com-mobile {
+    display: none;
+}
+
+@media (max-width: 560px) {
+    #slider_one img,
+    #slider_two img {
+        border: 1px solid black;
+    }
+
+    .FormOverlay{
+        display: none;
+    }
+    #form-overlay {
+        display: none;
+    }
+    .mobile-menu {
+        display: block;
+    }
+
+    #overlay_btn {
+        display: none;
+    }
+    
+    .pod-drupal-flex > h1 {
+        font-size: 26px;
+        margin-bottom: 35px;
+    }
+    .exp_new {
+        margin-top: 15px;
+        padding: 0;
+        width: 250px;
+        height: fit-content;
+    }
+    .exp-with-lap-mobile-info {
+        width:auto;
+    }
+    .exp-with-lap-mobile{
+        max-width: 100%;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .exp-drupal {
+        display: block;
+        margin: 0;
+        position: relative;
+        width: 100%;
+        height: 1100px;
+        background: linear-gradient(to bottom right, rgb(4,6,19), rgb(29,31,43));
+    }
+    .exp-with-lap {
+        display: none;
+    }
+    .pod-support {
+        width: 300px;
+    }
+    .competency {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: 3730px;
+        padding: 0;
+    }
+    .pod-drupal-flex {
+        transform: translateY(-2600px);
+    }
+    .pod-drupal-flex-img {
+        align-items: center;
+        flex-direction: column;
+    }
+    .competency_img {
+        margin: 0;
+        padding: 15px;
+    }
+    .competency_img::after {
+        top: 20px;
+        left: -15px;    
+    }
+    .content_wid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-com {
+        width: 270px;
+    }
+    .com-mobile {
+        display: block;
+    }
+    .com {
+        display: none;
+    }
+    .fullscreen-bg__video {
+        height: 100%;
+        width: auto;
+    }
+    .exp_menu_mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .exp {
+        margin: 0;
+        margin-top: 30px;
+        padding: 0;
+        width: 150px;
+    }
+    .exp_menu {
+        display: none;
+    }
+    #exp_1_m, #exp_3_m, #exp_5_m {
+        margin-right: 15px;
+    }
+    .fullscreen-bg {
+        height: 700px;
+    }
+    #tarif {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .menu {
+        display: none;
+    }
+    .menu_info {
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .menu_2 {
+        flex-direction: column;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    header {
+        display: block;
+    }
+
+    #Rate {
+        display: none;
+    }
+
+    #Rate_mob{
+        width: 100%;
+        height: auto;
+    }
+
+    .ui-card_new{
+        width: 89vw;
+        height: auto;
+        margin: auto;
+    }
+
+    #Razrab{
+        width: 100%;
+        font-size: 10px;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+
+    #Razrab br{
+        display: none;
+    }
+
+    .raz_text{
+        font-size: 13px;
+        margin-left: 15px;
+        text-align: left;
+    }
+
+    #Razrab h1{
+        padding-left: 15px;
+        margin-bottom: 25px;
+    }
+
+    #Razrab h1 br{
+        display: none;
+    }
+
+    #Quality{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+    
+    .Quality_elem{
+        margin: auto;
+        width: 50vw;
+    }
+
+    #Team{
+        width: 85%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    #Team button{
+        height: 30px; 
+        width: 35vw;
+        font-size: 10px;
+        font-weight: 700;
+        color: rgb(81, 80, 80);
+        vertical-align: middle;
+    }
+
+    .br_team_2{
+        display: none;
+    }
+
+    .name_razrab{
+        font-size: 14px;
+    }
+
+    .Team_elem p{
+        margin-bottom: 0px;
+        margin-top: 8px;
+        font-size: 12px;
+    }
+
+    #Team h1{
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    #Team img{
+        width: 100%;
+    }
+
+    #Team_flex{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .Team_elem{
+        width: 39vw;
+    }
+
+    #Case {
+        width: 90vw;
+        margin: auto;
+    }
+
+    #Case_one_1 div, #Case_two_3 div{
+        font-size: 12px;
+        margin-left: 10px; 
+        width: calc(100% - 10px); 
+        margin-top: 15px;
+        line-height: 13px;
+        margin-bottom: 20px;
+    }
+
+    .br_1{
+        display: none;
+    }
+
+    #Case h1{
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    #Case img{
+        width: 100%;
+        height: 20vh;
+    }
+
+    #Case_one_2 img{
+        width: 100%; 
+        height: 30vh;
+        margin-bottom: 15px;
+    }
+
+    #Case_two_1 img, #Case_two_2 img{
+        height: 57vh;
+        margin-bottom: 15px;
+    }
+
+    #Reviews {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-top: 30px;
+        height: 150px;
+        background: url(img/right-quote-sign.svg) no-repeat left top;
+        background-size: 30%;
+    }
+
+    #slider_three p {
+        padding-bottom: 25px;
+        border-bottom: 1px solid rgb(120, 120, 120);
+    }
+
+    #Reviews h1 {
+        font-size: 22px;
+    }
+
+    #Prev_Next {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #numb {
+        margin-left: 10px;
+    }
+
+    #next {
+        padding-left: 0px;
+    }
+
+    #Prev_Next div img {
+        width: 20px;
+    }
+
+    #Prev_Next button {
+        width: 20px;
+    }
+
+    #slider_three div {
+        width: 85%;
+        margin: auto;
+    }
+
+    #_3 {
+        text-align: center;
+    }
+
+    #_1 {
+        width: 76vw;
+        height: 27px;
+        box-shadow: 0 0 10px black;
+        background-color: rgb(255, 255, 255);
+        margin: auto;
+        margin-top: 50px;
+        border-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        position: absolute;
+        z-index: 4;
+        opacity: 0.1;
+        border: 1px solid rgb(169, 169, 169);
+    }
+
+    #_2 {
+        width: 83vw;
+        height: 45px;
+        background-color: rgb(255, 255, 255);
+        margin: auto;
+        margin-top: 60px;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 5;
+        opacity: 0.6;
+        border: 1px solid rgb(224, 223, 223);
+    }
+
+    #Com_1 {
+        text-align: center;
+        margin-top: 70px;
+        padding-top: 30px;
+        width: 90vw;
+        height: auto;
+        background: rgb(255, 255, 255);
+        position: absolute;
+        z-index: 6;
+        border-radius: 5px;
+        border: 1px solid rgb(224, 223, 223);
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        box-shadow: 0 0 50px 0 rgb(146, 145, 145);
+    }
+
+    #prev {
+        padding-left: 0px;
+    }
+
+    #Com_1 img {
+        width: 27%;
+        margin-bottom: 20px;
+        padding-right: 73%;
+    }
+
+    #Com_1 br {
+        display: none;
+    }
+
+    #Sliders_one_and_two {
+        margin-bottom: 70px;
+    }
+
+    #Sliders_one_and_two br {
+        display: none;
+    }
+
+    #Sliders_one_and_two p {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: left;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    #Sliders_one_and_two h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .Photo {
+        width: 35vw;
+        height: 20vw;
+        border-radius: 5px;
+        margin-left: 6px;
+    }
+
+    .Photo2 {
+        width: 35vw;
+        height: 20vw;
+        border-radius: 5px;
+        margin-left: 6px;
+    }
+
+    #slider_two {
+        overflow: hidden;
+        height: auto;
+    }
+
+    #slider_one {
+        height: auto;
+        margin-bottom: 6px;
+        margin-left: calc(-35vw + 15vw - 15px);
+    }
+
+    #FAQ {
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    #FAQ h1 {
+        font-size: 24px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    #FAQ ol {
+        font-size: 14px;
+        padding-left: 8%;
+        padding-right: 8%;
+        width: 84%;
+    }
+
+    #footer {
+        width: 100%;
+        background: url(img/D-flying.svg) no-repeat top center, url(img/D-footer.svg) no-repeat bottom right;
+        background-color: rgb(21, 26, 34);
+        background-size: 35%;
+        color: white;
+        border-top: 1px solid #e5e5e5;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    #Label_1 {
+        margin-top: 35px;
+        text-align: center;
+        font-size: 8px;
+    }
+
+    #Messege br {
+        display: none;
+    }
+
+    #Label_1 br {
+        display: block;
+    }
+
+    #Label_2 {
+        margin-top: 30px;
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+        text-align: justify;
+        margin-bottom: 30px;
+    }
+
+    #footer_1 {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+        height: auto;
+    }
+
+    input,
+    textarea,
+    button {
+        font-size: 15px;
+        width: calc(100% - 20px);
+        margin-bottom: 10px;
+        border: 1px solid rgba(256, 256, 256, 0.3);
+        border-radius: 5px;
+        line-height: 1.2;
+        height: 36px;
+        padding: 4px 10px;
+    }
+
+    textarea {
+        width: calc(100% - 20px);
+        height: 20vh;
+        padding: 4px 10px;
+        font-size: 15px;
+    }
+
+    #Messege ul {
+        margin-left: 0;
+        padding-left: 0;
+        margin-bottom: 40px;
+    }
+
+    #Messege li {
+        list-style-type: none;
+    }
+
+    #Number_project {
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+
+    #Emai_project {
+        font-size: 15px;
+    }
+
+    #img_1 {
+        width: 16px;
+    }
+
+    #img_2 {
+        width: 18px;
+    }
+
+    #Label_3 br {
+        display: none;
+    }
+
+    #Label_3 {
+        font-size: 10px;
+        margin-bottom: 0px;
+    }
+
+    #Checkbox {
+        margin-right: 5px;
+    }
+
+    #Check {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 15px;
+    }
+
+    #Lete_1  {
+        width: 90vw;
+        font-size: 17px;
+        height: 40px;
+        margin-bottom: 45px;
+    }
+
+    #Project_info {
+        padding-top: 20px;
+        border-top: 1px solid white;
+    }
+
+    #Project_info img {
+        margin-left: 10px;
+        background-color: rgb(241, 77, 52);
+        height: 22px;
+        width: 22px;
+        border-radius: 5px;
+    }
+
+    #Photo_conect {
+        margin-bottom: 5px;
+    }
+
+    #Mes_project {
+        font-size: 12px;
+        margin-top: 0px;
+        width: 90%;
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    #Mes_project br {
+        display: none;
+    }
+	
+    #h1_com{
+        font-size: 20px;
+        text-align: left;
+        margin-top: 25px;
+    }
+
+    #p_new{
+        font-size: 14px;
+        text-align: left;
+    }
+
+    #mess_good, #mess_error{
+        display: none;
+    }
+
+    #mess_good_1, #mess_error_1, #no_data{
+        display: none;
+        width: 90vw;
+    }
+}
 @media (min-width: 560px) {
+    
+    #mess_good, #mess_error{
+        display: none;
+    }
+
+    #mess_good_1, #mess_error_1, #no_data{
+        display: none;
+        width: calc(30vw - 40px);
+    }
+
+    #overlay_btn {
+        z-index: 99;
+        position: fixed;
+        bottom: 15px;
+        left: 15px;
+        width: 200px;
+        height: 50px;
+        font-size: 25px;
+        border: solid 1px black;
+        background: rgb(75, 93, 252);
+        color: white;
+        font-size: 20px;
+    }
+    .FormOverlay {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 100;
+        position: fixed;
+        width: 0;
+        height: 0;
+        background: rgba(0, 0, 0, 0.755);
+        left: 110px;
+        bottom: 45px;
+    }
+    #form-overlay {
+        margin-top: 20px;
+        opacity: 0;
+        display: inline-block;
+        position: absolute;
+        z-index: 101;
+        width: 40vw;/*40vw*/
+        height: 70vh;/*70vh*/
+        background: rgb(28, 30, 32);
+        border:solid 1px rgb(38, 0, 255);
+        border-radius: 15px;
+    }
+    .exp-drupal {
+        width: 100%;
+        height: 1500px;
+        background: linear-gradient(to bottom right, rgb(4,6,19), rgb(29,31,43));
+        margin-bottom: 150px;
+    }
+
+    .pod-drupal-flex > h1 {
+        font-size: 50px;
+    }
+
+    #Rate_mob{
+        display: none;
+    }
+
+    .raz_text{
+        margin-left: 45px; 
+        margin-top: 10px;
+    }
+
+    #padding_elem_2, #padding_elem_1{
+        padding-left: 50px;
+    }
+
+    #Quality{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+    
+    .Quality_elem{
+        width: 300px;
+    }
+
+    #Razrab{
+        margin: auto;
+        width: 900px; 
+        height: 400px;
+    }
+
+    #Razrab h1{
+        padding-left: 35px;
+        margin-bottom: 40px;
+    }
+
+    #Team_flex{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    
+    #Team button{
+        height: 50px; 
+        width: 150px;
+    }
+
+    .Team_elem {
+        text-align: center;
+    }
+
+    .name_razrab{
+        font-size: 20px;
+    }
+
+    .Team_elem p{
+        font-size: 14px;
+    }
+
+    #Team_flex div img{
+        width: 230px;
+        height: 235px;
+    }
+
+    #Team{
+        height: 800px; 
+        margin-bottom: 200px;
+    }
+
+    #Team h1{
+        margin-bottom: 60px;
+    }
+
+    #Team_flex{
+        width: 900px;
+    }
+
+    .Team_elem{
+        width: 300px; 
+        margin-bottom: 35px;
+    }
+
+    .Team_elem div{
+        width: 230px;
+    }
+
+    #Case{
+        width: 860px; 
+        height: 700px; 
+        margin: auto; 
+        text-align: center; 
+        margin-bottom: 70px;
+    }
+
+    #Case_two_3 div{
+        padding-top: 15px;
+        padding-left: 25px; 
+        width: 100%; 
+        margin-top: 15px;
+        line-height: 15px;
+        font-size: 14px;
+    }
+
+    #Case_two{
+        width: 100%; 
+        height: 49%;
+        margin: auto;
+    }
+
+    #Case_two_1 img, #Case_two_2 img{
+        width: 100%; 
+        height: 100%;
+    }
+
+    #Case_two_3{
+        width: 100%;
+    }
+
+    #Case_one_2 img{
+        width: 100%; 
+        height:100%;
+    }
+
+    .br_2{
+        display: none;
+    }
+
+    #Case_one_1 div{
+        padding-top: 15px;
+        padding-left: 25px; 
+        width: 100%; 
+        margin-top: 15px;
+        line-height: 15px;
+        font-size: 14px;
+    }
+
+    #Case_one{
+        width: 100%; 
+        height: 49%; 
+        margin: auto; 
+        margin-bottom: 1%;
+    }
+
+    #Case h1{
+        margin-bottom: 45px;
+    }
+
+    #Case div {
+        margin-left: 5px;
+    }
+
+    #Case_one, #Case_two{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #Case_one_1 {
+        flex: 1;
+        border-radius: 5px 5px;
+    }
+
+    #Case_one_2 {
+        flex: 2;
+    }
+
+    #Case_two_3 img{
+        width: 100%;
+    }
+
+    #Case_two_1, #Case_two_2, #Case_two_3 {
+        margin: 0px;
+        padding: 0px;
+        flex: 1;
+    }
+
     #Reviews {
         display: flex;
         justify-content: center;
