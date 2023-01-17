@@ -98,6 +98,7 @@
               </nav>
             </div>
           </div>
+		</div>
           <!-- Мобильная версия навигации -->
           <button
             type="button"
@@ -212,7 +213,6 @@
           </div>
         </div>
       </div>
-
       <div>
         <!-- 13 лет - эксперты -->
         <article about="#main">
@@ -980,7 +980,7 @@
               <div class="row justify-content-around">
                 <div class="col-md-3 col-sm-4 col-12 addition-item">
                   <div class="addition-bg">
-                    <img src="img/ik1.svg" class="img-fluid" />
+                    <img src="img/ik1.svg" alt="1" class="img-fluid" />
                   </div>
                   <div class="addition-head">
                     <div class="addition-num">от 1ч</div>
@@ -991,7 +991,7 @@
                 </div>
                 <div class="col-md-3 col-sm-4 col-12 addition-item">
                   <div class="addition-bg">
-                    <img src="img/ik2.svg" class="img-fluid" />
+                    <img src="img/ik2.svg" alt="2" class="img-fluid" />
                   </div>
                   <div class="addition-head">
                     <div class="addition-num">от 20ч</div>
@@ -1003,7 +1003,7 @@
                 </div>
                 <div class="col-md-3 col-sm-4 col-12 addition-item">
                   <div class="addition-bg">
-                    <img src="img/ik3.svg" class="img-fluid" />
+                    <img src="img/ik3.svg" alt="3" class="img-fluid" />
                   </div>
                   <div class="addition-head">
                     <div class="addition-num">от 8ч</div>
@@ -1270,7 +1270,8 @@
         </div>
         <!--В action располагается ссылка на которую будут отправлены данные из формы-->
         <div> <!--Форма-->
-            <form id="Form_two" @submit="checkForm" method="POST" action="https://api.slapform.com/zweJt9X5Rc"  accept-charset="UTF-8">
+            <form id="Form_two"  method="POST" action="https://api.slapform.com/zweJt9X5Rc"  accept-charset="UTF-8">
+	      <div @submit="checkForm"/div>
               <p id="mess_good_1" style="color: greenyellow; text-align: center;">Ваше сообщение удачно отправлено!</p>   <!--Эти три сообщения изначльно скрыты. В зависимости от ситуации может появлться одно из них-->
               <p id="no_data" style="color: rgb(255, 0, 0); text-align: center;">Заполните все поля!</p>
               <p id="mess_error_1" style="color: rgb(255, 0, 0); text-align: center;">Ваше сообщение не отправлено. Попробуйте ещё раз!</p>
@@ -1310,6 +1311,5 @@
         </div>
     </div>
     </footer>
-    
     </body>
 </html>
