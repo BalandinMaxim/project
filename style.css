@@ -2953,4 +2953,20 @@
         margin-right: 10px;
         float: left;
     }
+        #FAQ {
+        height: auto;
+        width: 100%;
+        margin: auto;
+    }
+
+    #FAQ h1 {
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    #FAQ ol {
+        margin: auto;
+        width: 700px;
+    }
+	    
 }
