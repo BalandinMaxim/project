@@ -10,9 +10,6 @@ var g1;
 var window;
 var ResizeSensor;
 var jQuery;
-/*110rightx45bottom*/
-
-
 function Admin_menu_on() {
     $("#Admin-menu").show(300);
 }
@@ -59,7 +56,7 @@ function About_mobile() {
 $(document).ready(function () {  //Данная функция будет выполняться после загрузки всей сраницы.
     var c;
     var a = 0;
-    $("#Reviews").css("padding-bottom", $("#Com_1").height());   //Перерасчитываем размер блока с отзываеми при помощи библиотеки найденной в интернете.
+    $("#Reviews").css("padding-bottom", $("#Com_1").height());   
     $(window).resize(function () {
         new ResizeSensor(jQuery("#Com_1"), function () {
             $("#Reviews").css("padding-bottom", $("#Com_1").height());
@@ -107,7 +104,7 @@ $(document).ready(function () {  //Данная функция будет вып
     });
    
 const app = new Vue({   //Это переменная формы, которая отображается при нажатии на кнопку связатьяс с нами.
-        el: '#app',   //id этой формы
+        el: '#app',   
         data: {   //поля формы
           errors: [],
           name: null,
@@ -116,7 +113,7 @@ const app = new Vue({   //Это переменная формы, которая
           message: null,
           checkbox: null
         },
-        mounted() {      //Этот метод берет сохраненые значения из LocalStorage и записывает их в поля.
+        mounted() { //Этот метод берет сохраненые значения из LocalStorage и записывает их в поля.
             if (localStorage.name) {
               this.name = localStorage.name;
             }
@@ -130,7 +127,7 @@ const app = new Vue({   //Это переменная формы, которая
                 this.message=localStorage.message;
             }
           },
-        watch: {        //Метод который следит за заполненем полей и сохраняет значения в LocalStorage
+        watch: { //Метод который следит за заполненем полей и сохраняет значения в LocalStorage
             name(newName) {
               localStorage.name = newName;
             },
@@ -150,7 +147,7 @@ const app = new Vue({   //Это переменная формы, которая
             $("#mess_error").css("display", "none");
             this.errors = [];
       
-            if (!this.name) {   //Поочередно проверям все поля на наличие данных. Если  поле не записаны данные, то заносим соответствующую запись в массив с ошибками
+            if (!this.name) {   
               this.errors.push('Требуется указать имя.');
             }
             if (!this.number) {
