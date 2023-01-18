@@ -1289,20 +1289,20 @@
               <p id="no_data" style="color: rgb(255, 0, 0); text-align: center;">Заполните все поля!</p>
               <p id="mess_error_1" style="color: rgb(255, 0, 0); text-align: center;">Ваше сообщение не отправлено. Попробуйте ещё раз!</p>
               <p style="margin-bottom: 0px; margin-top: 0px;">
-                <input id="form_1_name" type="text" name="name"  placeholder="Ваше имя" maxlength="35" style="background-color: rgb(121, 135,146,0); color: white; border: 1px solid rgba(256, 256, 256, 0.3);"> <!--Это input для имени-->
+                <input id="form_1_name" type="text" name="name" v-model="name"  placeholder="Ваше имя" maxlength="35" style="background-color: rgb(121, 135,146,0); color: white; border: 1px solid rgba(256, 256, 256, 0.3);"> <!--Это input для имени-->
               </p>
               <p style="margin-top: 0px; margin-bottom: 0px;">
-                <input id="number_polz_1" type="text" name="number"  placeholder="Телефон" maxlength="15" style="background-color: rgb(121, 135,146,0); color: white; border: 1px solid rgba(256, 256, 256, 0.3);"> <!--Это input для номера телефона-->
+                <input id="number_polz_1" type="text" name="number" v-model="number"  placeholder="Телефон" maxlength="15" style="background-color: rgb(121, 135,146,0); color: white; border: 1px solid rgba(256, 256, 256, 0.3);"> <!--Это input для номера телефона-->
               </p>
               <p style="margin-top: 0px; margin-bottom: 0px;">
-                <input id="email_polz_1" type="email" name="email" placeholder="E-mail" style="background-color: rgb(121, 135,146,0); color: white; border: 1px solid rgba(256, 256, 256, 0.3);"> <!--Это input для email-->
+                <input id="email_polz_1" type="email" name="email" v-model="email" placeholder="E-mail" style="background-color: rgb(121, 135,146,0); color: white; border: 1px solid rgba(256, 256, 256, 0.3);"> <!--Это input для email-->
               </p>
               <p style="margin-top: 0px; margin-bottom: 0px;">
-                <textarea id="message_polz_1" name="message"  placeholder="Ваш коментарий" style="background-color: rgb(121, 135,146,0); color: white; border: 1px solid rgba(256, 256, 256, 0.3); resize: none;"></textarea> <!--Это input для коментария-->
+                <textarea id="message_polz_1" name="message" v-model="message"  placeholder="Ваш коментарий" style="background-color: rgb(121, 135,146,0); color: white; border: 1px solid rgba(256, 256, 256, 0.3); resize: none;"></textarea> <!--Это input для коментария-->
               </p>
               <div id="Check">  <!--В этом div будет располагаться чекбокс о согласия на отправку данных и надпись-->
                     <div id="Checkbox">
-                      <input type="checkbox"  name="checkbox" style="height: 20px; width:20px;"> <!--Это чекбокс-->
+                      <input type="checkbox" v-model="checkbox" name="checkbox"  style="height: 20px; width:20px;"> <!--Это чекбокс-->
                     </div>
                     <div>
                       <label id="Label_3" style="color: rgb(121, 135,146);"> Отправляя заявку, я даю согласие на <a style="color: red;">обработку своих <br>персональных данных</a>.</label>  
